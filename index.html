@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numina — Life Blueprint</title>
+<title>Numina, Life Blueprint</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 :root{
@@ -166,14 +166,14 @@ footer::before{content:'';position:absolute;inset:0;background-image:var(--jali)
 footer .wrap{position:relative;z-index:2;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
 @media(max-width:760px){.form-grid,.gen-spectrum,.lifestrip,.q4,.twocol{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}.hero-info{grid-template-columns:1fr}}
 @media print{.topbar,.hero,#formSection,footer,.form-actions{display:none!important}#reportSection{display:block!important}.report::before{display:none}.rtabs{display:none}.rpanel{display:block!important}.rpanel+.rpanel{margin-top:20px}}
-#wm,#pdfHead,#pdfFoot{display:none}@media print{ #wm{display:flex;position:fixed;inset:0;z-index:9999;pointer-events:none;align-items:center;justify-content:center;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact} #wm .wmtext{font-family:var(--serif),Georgia,serif;font-weight:600;font-size:17vw;line-height:1;color:rgba(33,26,51,.12);transform:rotate(-45deg);white-space:nowrap;letter-spacing:.06em;-webkit-print-color-adjust:exact;print-color-adjust:exact} #pdfHead{display:flex;position:fixed;top:0;left:0;right:0;height:20mm;box-sizing:border-box;padding:9mm 13mm 0;justify-content:space-between;align-items:flex-start;background:#fff;font-family:var(--serif),Georgia,serif;font-weight:600;font-size:12px;color:#00714A;z-index:10000;-webkit-print-color-adjust:exact;print-color-adjust:exact} #pdfFoot{display:flex;position:fixed;bottom:0;left:0;right:0;height:18mm;box-sizing:border-box;padding:0 13mm 9mm;justify-content:space-between;align-items:flex-end;background:#fff;font-size:10px;color:#8C849C;z-index:10000;-webkit-print-color-adjust:exact;print-color-adjust:exact} @page{margin:26mm 13mm 24mm 13mm} body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}@media print{/*PRINT_EDGE_FIX*/ #historyBar{display:none!important} body{background:#fff} #reportSection{background:#fff;padding:0} #reportSection .wrap{padding:0;max-width:100%} .report{border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important} .report::after,.panel::after,.report::before{display:none!important}}.credit a{color:var(--marigold);font-weight:600}.report .credit a{color:var(--magenta)}</style></head>
+#wm,#pdfHead,#pdfFoot{display:none}@media print{ #wm{display:flex;position:fixed;inset:0;z-index:9999;pointer-events:none;align-items:center;justify-content:center;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact} #wm .wmtext{font-family:var(--serif),Georgia,serif;font-weight:600;font-size:17vw;line-height:1;color:rgba(33,26,51,.12);transform:rotate(-45deg);white-space:nowrap;letter-spacing:.06em;-webkit-print-color-adjust:exact;print-color-adjust:exact} @page{margin:14mm 12mm} body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}@media print{/*PRINT_EDGE_FIX*/ #historyBar{display:none!important} body{background:#fff} #reportSection{background:#fff;padding:0} #reportSection .wrap{padding:0;max-width:100%} .report{border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important;overflow:visible!important} .report::after,.panel::after,.report::before{display:none!important} .report h2,.report h3,.report h4,.report h5{break-after:avoid;page-break-after:avoid;break-inside:avoid;page-break-inside:avoid} .report p,.report li,.report ul,.report ol,.report tr,.report table,.report .card,.report .gen-card,.report .okbox,.report .warn,.report .note,.report svg,.report img,.report .grid3{break-inside:avoid;page-break-inside:avoid}}.credit a{color:var(--marigold);font-weight:600}.report .credit a{color:var(--magenta)}</style></head>
 <body>
 <header class="topbar"><div class="wrap"><div class="brand"><span class="mk"></span>Numina</div><div class="tag">Numbers · Stars · Generation</div></div></header>
 
 <section class="hero"><div class="wrap">
   <div class="eyebrow">Life blueprint</div>
   <h1>The architecture of <span class="grad-text">your</span> life, read in numbers and time.</h1>
-  <p class="lede">Numina turns a name, a birth date and a birthplace into a structured reading — core numbers, an astrology snapshot, and the generational forces that shaped how you think. One page. No accounts.</p>
+  <p class="lede">Numina turns a name, a birth date and a birthplace into a structured reading, core numbers, an astrology snapshot, and the generational forces that shaped how you think. One page. No accounts.</p>
   <div class="cta-row">
     <button class="btn" onclick="scrollToForm()">Create your blueprint</button>
     <button id="btnSee" class="btn-ghost btn" disabled onclick="goToReport()">See a reading</button>
@@ -221,7 +221,7 @@ footer .wrap{position:relative;z-index:2;display:flex;justify-content:space-betw
 <section class="section" id="reportSection"><div class="wrap"><div id="historyBar" class="histbar" style="display:none"></div><div class="report panel" id="reportOut"></div></div></section>
 
 <footer><div class="wrap">
-  <div>Numina — a reflective tool, not professional advice.</div>
+  <div>Numina, a reflective tool, not professional advice.</div>
   <div>Numerology &amp; astrology are not scientifically validated. Generational context is broad sociology, not individual prediction.</div>
 
   <div class="credit" style="width:100%;border-top:1px solid rgba(255,255,255,.16);margin-top:8px;padding-top:14px">Built with curiosity by <a href="https://www.linkedin.com/in/htrap94" target="_blank" rel="noopener">Parth Agrawal</a>.</div>
@@ -4370,7 +4370,7 @@ const DEFAULT_KB = {
         "temperament": "passionate, energetic, bold",
         "marriage": "Bring passion, spontaneity and warmth; thrive with a partner who shares their enthusiasm and gives them freedom; temper impulsiveness and dominance.",
         "career": "Excel in leadership, entrepreneurship and high-energy or creative roles where they can initiate and inspire; best with autonomy rather than rigid routine.",
-        "health": "High vitality needing an outlet — regular vigorous activity prevents burnout and balances restless energy.",
+        "health": "High vitality needing an outlet, regular vigorous activity prevents burnout and balances restless energy.",
         "wealth": "Earn boldly and act decisively on opportunity; benefit from curbing impulsive spending and adding long-term planning."
       },
       "Earth": {
@@ -4383,7 +4383,7 @@ const DEFAULT_KB = {
         "marriage": "Offer loyalty, reliability and steady commitment; build lasting bonds; guard against stubbornness and over-focus on material security.",
         "career": "Suited to structured, precision-based and management roles (finance, engineering, administration); valued for diligence and consistency.",
         "health": "Thrive on routine, grounding practices and time in nature; benefit from regular habits and avoiding overwork.",
-        "wealth": "Often the strongest money-managers — disciplined savers and planners who build wealth steadily and value stability."
+        "wealth": "Often the strongest money-managers, disciplined savers and planners who build wealth steadily and value stability."
       },
       "Air": {
         "signs": [
@@ -4393,7 +4393,7 @@ const DEFAULT_KB = {
         ],
         "temperament": "intellectual, communicative, social",
         "marriage": "Value mental connection, conversation and shared ideas; flourish with intellectually engaging partners; ground abstract thinking in emotional presence.",
-        "career": "Excel in communication, ideas, networking, teaching and media — roles needing intellectual energy and adaptability.",
+        "career": "Excel in communication, ideas, networking, teaching and media, roles needing intellectual energy and adaptability.",
         "health": "Need mental stimulation and social interaction; benefit from breathwork, mindfulness and managing nervous energy.",
         "wealth": "Resourceful and idea-driven about earning; benefit from committing to a consistent plan rather than scattering across ventures."
       },
@@ -4405,7 +4405,7 @@ const DEFAULT_KB = {
         ],
         "temperament": "emotional, intuitive, deep",
         "marriage": "Form deep, intimate emotional bonds; devoted, nurturing partners; maintain healthy boundaries and avoid over-absorbing a partner's moods.",
-        "career": "Drawn to roles allowing emotional connection and intuition — healing, counselling, the arts, caregiving and creative fields.",
+        "career": "Drawn to roles allowing emotional connection and intuition, healing, counselling, the arts, caregiving and creative fields.",
         "health": "Thrive with emotional and spiritual self-care; benefit from rest, emotional release and protecting against absorbed stress.",
         "wealth": "Make financial choices intuitively; benefit from structured budgeting to offset impulsive or sentiment-driven decisions."
       }
@@ -4416,8 +4416,8 @@ const DEFAULT_KB = {
   "soul_number": {
     "_comment": "His 'Soul Numbers' = the digits 5 (Mercury) and 6 (Venus). NOT the Western vowel-based soul-urge. Method: check presence of 5 and 6 in the Lo Shu birth chart. 6=primary (Venus, richest portfolio), 5=secondary (Mercury, sits at grid centre, friend to all). Both present=strongest; both absent='soul/current has left the chart'.",
     "numbers": {
-      "5": "secondary — Mercury: balances the whole chart from the centre, friendly with every number",
-      "6": "primary — Venus: wealth, fame, respect, luxury, glamour, foreign settlement, marriage/relationship sector"
+      "5": "secondary, Mercury: balances the whole chart from the centre, friendly with every number",
+      "6": "primary, Venus: wealth, fame, respect, luxury, glamour, foreign settlement, marriage/relationship sector"
     },
     "remedy_missing_6": "Friday donation of white items (flour, rice, milk, sweets, cloth), ideally to a needy person or temple/gurudwara; wear a metal-chain golden watch (never rubber/leather strap).",
     "remedy_missing_5": "Use green as much as possible (green thread on wrist, green vegetables/cucumber, green handkerchief/pen, carry something green to interviews)."
@@ -4551,7 +4551,7 @@ const DEFAULT_KB = {
         "method": "Total ALL digits of the account number, reduce to a single digit."
       },
       "mobile": {
-        "method": "Ignore the country code; total the 10 digits, reduce to a single digit. (He rejects the myth that specific digits like 4/8 must not appear — only the total matters.)"
+        "method": "Ignore the country code; total the 10 digits, reduce to a single digit. (He rejects the myth that specific digits like 4/8 must not appear, only the total matters.)"
       },
       "vehicle": {
         "method": "Total ONLY the last 4 digits (the alpha-numeric prefix is 'stagnant'); reduce to a single digit."
@@ -4563,17 +4563,17 @@ const DEFAULT_KB = {
         "method": "Set the 4-digit PIN so its total lands on a number MISSING from your chart (or a Driver-friendly number); avoid 4 and 8."
       },
       "wrist_watch": {
-        "method": "Wear a metal-chain watch (never leather/rubber — they insulate). If 6 is missing wear golden; if 7 missing wear golden+silver; if both present, golden or golden+silver but NOT silver-only."
+        "method": "Wear a metal-chain watch (never leather/rubber, they insulate). If 6 is missing wear golden; if 7 missing wear golden+silver; if both present, golden or golden+silver but NOT silver-only."
       },
       "bracelet": {
-        "method": "Wear a crystal bracelet — especially if any of 2 (Moon), 5 (Mercury), 8 (Saturn) is missing; it 'cleanses' the aura."
+        "method": "Wear a crystal bracelet, especially if any of 2 (Moon), 5 (Mercury), 8 (Saturn) is missing; it 'cleanses' the aura."
       }
     }
   },
   "partnership": {
     "_comment": "Whether a person should do business partnership at all (the rule is chart-based, not a pair table). Number 7 (Ketu) breaks partnerships.",
     "rules": [
-      "If 7 appears 2+ times in the chart (especially Driver 7 AND Conductor 7), avoid business partnership — high chance of betrayal.",
+      "If 7 appears 2+ times in the chart (especially Driver 7 AND Conductor 7), avoid business partnership, high chance of betrayal.",
       "If 6 (Venus) is missing, the relationship/support sector is weak (you help others, few help you).",
       "Worst case: 5 AND 6 missing plus multiple 7s."
     ],
@@ -4875,7 +4875,7 @@ const DEFAULT_KB = {
     }
   },
   "generational_context": {
-    "_comment": "Generational/cohort context for the 'Childhood Context Decoder' and 'Personality Evolution Map' report sections. This is GENERATIONAL SOCIOLOGY, not numerology or astrology, and describes broad population-level tendencies of people born around the same time/place — NOT the individual. Cohort year ranges follow standard cohort research Research (Silent→Gen Z); Gen Z's end and all of Gen Alpha are contested (Alpha per a generational researcher, traits projected).",
+    "_comment": "Generational/cohort context for the 'Childhood Context Decoder' and 'Personality Evolution Map' report sections. This is GENERATIONAL SOCIOLOGY, not numerology or astrology, and describes broad population-level tendencies of people born around the same time/place, NOT the individual. Cohort year ranges follow standard cohort research Research (Silent→Gen Z); Gen Z's end and all of Gen Alpha are contested (Alpha per a generational researcher, traits projected).",
     "disclaimer": "Generational labels are broad heuristics, not deterministic categories. Traits are population-level tendencies, not individual predictions, and vary by class, region, gender, urban/rural setting and personal circumstance. In India especially, the biggest formative dividing lines are economic-policy events (1991 liberalization, 2016 Jio) more than Western decade boundaries.",
     "cohorts": [
       {
@@ -5030,7 +5030,7 @@ const DEFAULT_KB = {
           "growth": "expanding emotional vocabulary and openness to therapeutic frameworks"
         },
         "financial_mindset": {
-          "approach": "Post-war prosperity, affordable housing/education, pensions and a long bull market — generally asset-rich.",
+          "approach": "Post-war prosperity, affordable housing/education, pensions and a long bull market, generally asset-rich.",
           "strengths": [
             "high homeownership & equity",
             "highest retirement-account ownership",
@@ -5114,7 +5114,7 @@ const DEFAULT_KB = {
           "competence / getting things done"
         ],
         "worldview": "Trust is earned and institutions are fallible, so rely on yourself and stay adaptable.",
-        "tech": "analog childhood, digital adulthood — the 'bridge' generation",
+        "tech": "analog childhood, digital adulthood, the 'bridge' generation",
         "vs_prev": "More skeptical of institutions and less career-as-identity than Boomers.",
         "vs_next": "Less digitally immersed and less institution-optimistic than the always-connected Millennials.",
         "career_compass": {
@@ -5132,7 +5132,7 @@ const DEFAULT_KB = {
             "flexibility & informality",
             "pragmatic self-sufficiency"
           ],
-          "fulfillment": "Autonomy, competence and balance — they thrive with minimal supervision and resent micromanagement."
+          "fulfillment": "Autonomy, competence and balance, they thrive with minimal supervision and resent micromanagement."
         },
         "relationship_patterns": {
           "communication": "pragmatic, self-reliant; low-drama directness",
@@ -5141,7 +5141,7 @@ const DEFAULT_KB = {
           "growth": "asking for help and naming needs rather than absorbing stress"
         },
         "financial_mindset": {
-          "approach": "Came up through 1987, dot-com and 2008 at peak buying years — pragmatic, self-reliant, but squeezed.",
+          "approach": "Came up through 1987, dot-com and 2008 at peak buying years, pragmatic, self-reliant, but squeezed.",
           "strengths": [
             "healthy financial behaviours",
             "solid retirement-account ownership",
@@ -5181,7 +5181,7 @@ const DEFAULT_KB = {
             "focus": "retirement catch-up, career capstone",
             "opportunity": "catch-up contributions, equity peak, encore pivots",
             "challenge": "plateau/ageism, savings gaps",
-            "lesson": "it's not too late to compound — automate aggressive late saving"
+            "lesson": "it's not too late to compound, automate aggressive late saving"
           },
           {
             "stage": "60s+",
@@ -5226,7 +5226,7 @@ const DEFAULT_KB = {
           "stability amid cost-of-living pressure"
         ],
         "worldview": "Work and life should align with personal values, and technology connects us to a more open world.",
-        "tech": "digital adolescence — adopted internet and social media as teens",
+        "tech": "digital adolescence, adopted internet and social media as teens",
         "vs_prev": "More always-connected and optimistic than skeptical, self-reliant Gen X.",
         "vs_next": "More idealistic and optimistic than the more pragmatic, security-favouring Gen Z.",
         "career_compass": {
@@ -5253,7 +5253,7 @@ const DEFAULT_KB = {
           "growth": "tolerating commitment rather than endlessly optimizing"
         },
         "financial_mindset": {
-          "approach": "Entered work in the 2008 recession with record student debt — behind prior generations at the same age but disciplined savers.",
+          "approach": "Entered work in the 2008 recession with record student debt, behind prior generations at the same age but disciplined savers.",
           "strengths": [
             "strong monthly savings habit",
             "financially open and engaged",
@@ -5316,7 +5316,7 @@ const DEFAULT_KB = {
         "end": 2012,
         "range": "1997–2012 (end provisional)",
         "formative": [
-          "first true digital natives — internet from birth",
+          "first true digital natives, internet from birth",
           "smartphones and social media throughout adolescence",
           "witnessing debt and housing crises",
           "climate and social-justice awareness via digital media",
@@ -5343,7 +5343,7 @@ const DEFAULT_KB = {
           "social impact"
         ],
         "worldview": "Institutions and the economy feel precarious, so be pragmatic, stay authentic, and push for justice.",
-        "tech": "digital from birth — no memory of a pre-smartphone world",
+        "tech": "digital from birth, no memory of a pre-smartphone world",
         "vs_prev": "More pragmatic and risk-averse than idealistic Millennials; first to never know a pre-smartphone world.",
         "vs_next": "Still had some pre-tablet/pre-AI childhood, unlike touchscreen-and-AI-native Gen Alpha.",
         "career_compass": {
@@ -5366,11 +5366,11 @@ const DEFAULT_KB = {
         "relationship_patterns": {
           "communication": "text-first, digital-native; report an in-person 'communication gap'",
           "trend": "dating later/less; record share single-and-not-looking; declining dating-app use",
-          "conflict": "high conflict-avoidance — ghosting; fear of how vulnerability lands",
+          "conflict": "high conflict-avoidance, ghosting; fear of how vulnerability lands",
           "growth": "building tolerance for in-person vulnerability and direct conflict"
         },
         "financial_mindset": {
-          "approach": "First true digital natives shaped by 2008, student debt and the pandemic — conservative, savings-oriented, money-transparent early.",
+          "approach": "First true digital natives shaped by 2008, student debt and the pandemic, conservative, savings-oriented, money-transparent early.",
           "strengths": [
             "strong savings orientation",
             "money-transparent ('loud budgeting')",
@@ -5394,7 +5394,7 @@ const DEFAULT_KB = {
           {
             "blind_spot": "Digital conflict-avoidance",
             "shows_up": "ghosting, avoiding hard conversations",
-            "strategy": "practice low-stakes in-person 'reps' — curiosity questions and direct asks"
+            "strategy": "practice low-stakes in-person 'reps',curiosity questions and direct asks"
           },
           {
             "blind_spot": "Comparison & precarity",
@@ -5443,7 +5443,7 @@ const DEFAULT_KB = {
           "projected: highly screen-fluent",
           "projected: short-form, on-demand attention",
           "projected: shaped by AI and personalization",
-          "note: still children — trait research is preliminary"
+          "note: still children, trait research is preliminary"
         ],
         "values": [
           "too early to document reliably",
@@ -5453,8 +5453,8 @@ const DEFAULT_KB = {
           "not yet meaningfully measurable",
           "projected: interactivity, personalization, instant access"
         ],
-        "worldview": "Not yet formed — projections only.",
-        "tech": "born digital and AI-adjacent — touchscreen-native from infancy",
+        "worldview": "Not yet formed, projections only.",
+        "tech": "born digital and AI-adjacent, touchscreen-native from infancy",
         "vs_prev": "Even more immersed in touchscreens, voice and AI from infancy than Gen Z, with no analog phase.",
         "vs_next": "Precedes Generation Beta (2025+), expected to grow up with even more pervasive AI.",
         "career_compass": {
@@ -5464,18 +5464,18 @@ const DEFAULT_KB = {
             "fields not yet emerged"
           ],
           "work_preferences": [
-            "(projected) digital fluency, personalization — too early to measure"
+            "(projected) digital fluency, personalization, too early to measure"
           ],
-          "fulfillment": "Unknown — not yet in the workforce; projected to be the most tech-literate generation (a generational researcher)."
+          "fulfillment": "Unknown, not yet in the workforce; projected to be the most tech-literate generation (a generational researcher)."
         },
         "relationship_patterns": {
-          "communication": "(emerging) screen-mediated from infancy — not yet measurable",
+          "communication": "(emerging) screen-mediated from infancy, not yet measurable",
           "trend": "not applicable (cohort is children)",
           "conflict": "unmeasurable",
           "growth": "parent-reported: life-skills/risk-assessment vs high digital confidence"
         },
         "financial_mindset": {
-          "approach": "Unmeasurable — children. Projected to be wealthy and fintech-native (a generational researcher), unverified.",
+          "approach": "Unmeasurable, children. Projected to be wealthy and fintech-native (a generational researcher), unverified.",
           "strengths": [
             "(projected) digital/financial-tech nativity"
           ],
@@ -5511,7 +5511,7 @@ const DEFAULT_KB = {
             "focus": "identity, learning",
             "opportunity": "digital-native learning tools",
             "challenge": "attention/mental-health risks (early)",
-            "lesson": "too early for firm conclusions — monitor, don't assume"
+            "lesson": "too early for firm conclusions, monitor, don't assume"
           }
         ]
       }
@@ -5728,18 +5728,18 @@ const DEFAULT_KB = {
   },
   "blessing_number": {
     "method": "Reduce the birth year to a single digit; Male = 11 - that; Female = that + 4; reduce again to 1-9.",
-    "general": "A 'wild-card' number that can shift the whole chart -- most potent when it is not already present in your date, month, year, driver or conductor, and especially if it completes one of the eight grid lines."
+    "general": "A 'wild-card' number that can shift the whole chart, most potent when it is not already present in your date, month, year, driver or conductor, and especially if it completes one of the eight grid lines."
   },
   "karmic_numbers": {
     "days": [10, 13, 14, 16, 19],
     "by_day": {
-      "10": "The karmic slate sits at zero -- neither credit nor debt; your conduct now sets the balance.",
+      "10": "The karmic slate sits at zero, neither credit nor debt; your conduct now sets the balance.",
       "13": "Associated with past misuse of power; brings both capability and considerable struggle.",
-      "14": "Linked to 'abuse of freedom' -- a caution around money handling and shortcuts.",
-      "16": "Linked to 'abuse of love' -- a caution around relationships and fidelity.",
-      "19": "Linked to 'abuse of power' -- a caution against repeating self-serving use of authority."
+      "14": "Linked to 'abuse of freedom', a caution around money handling and shortcuts.",
+      "16": "Linked to 'abuse of love', a caution around relationships and fidelity.",
+      "19": "Linked to 'abuse of power', a caution against repeating self-serving use of authority."
     },
-    "remedy_note": "In this method karmic debt is cleared only through good deeds -- no yantra, mantra or tantra removes it; be wary of anyone selling such a 'fix'."
+    "remedy_note": "In this method karmic debt is cleared only through good deeds, no yantra, mantra or tantra removes it; be wary of anyone selling such a 'fix'."
   },
   "master_numbers": {
     "11": "Visionary 'dreamer' (11 -> 2, Moon): strong imagination; executes best with a mentor or support system.",
@@ -5754,7 +5754,7 @@ const DEFAULT_KB = {
     "rules": [
       "Wear a metal-strap wrist-watch (not leather or rubber); match the metal colour to any missing 6/7.",
       "Wear a crystal bracelet on the left hand to clear negative energy.",
-      "When taking the car out, edge it forward first, then reverse -- don't 'start the day in reverse'.",
+      "When taking the car out, edge it forward first, then reverse, don't 'start the day in reverse'.",
       "Avoid starting important work or leaving home in the 'paune' window (clock minutes :40-:50).",
       "Wear your driver's favourable colour and avoid its adverse colour."
     ]
@@ -5763,7 +5763,7 @@ const DEFAULT_KB = {
     "rules": [
       "Slant the signature gently upward (rising), never flat.",
       "Keep letters close-knit / joined rather than widely gapped.",
-      "Add an underline beneath -- but it must not cross through any letter.",
+      "Add an underline beneath, but it must not cross through any letter.",
       "Place two small dots below the underline as 'support'.",
       "Never sign in black ink; prefer blue."
     ],
@@ -5771,7 +5771,7 @@ const DEFAULT_KB = {
   },
   "investing_style": {
     "stock_market": "Needs 6 (Venus); 5 and 6 together is strongest. Lacking both, the method advises avoiding direct trading; extra caution for Driver 4 or 8.",
-    "stock_alternative": "If 5 and 6 are both absent but 3 and 7 are present, the method suggests advising/broking -- handling others' money for commission rather than trading your own.",
+    "stock_alternative": "If 5 and 6 are both absent but 3 and 7 are present, the method suggests advising/broking, handling others' money for commission rather than trading your own.",
     "property": "Favoured when 2, 5 and 8 are present (5+8 strong; 2+5 acceptable); 2+8 without 5 is called risky.",
     "gold": "Tied to 6 (Venus).",
     "silver": "Tied to 7 (Ketu)."
@@ -5789,77 +5789,95 @@ const DEFAULT_KB = {
   "compound_numbers": {
     "_about": "The classical 'compound' (two-digit) reading: the single digit shows the outer/material self, while the two-digit number behind it (10-52) shows the hidden current. Read the two-digit total of the birth day, the name, or date+month.",
     "meanings": {
-      "10": "Wheel of Fortune -- honour, faith and self-confidence; rise and fall; plans tend to be carried out.",
+      "10": "Wheel of Fortune: honour, faith and self-confidence; rise and fall; plans tend to be carried out.",
       "11": "A warning of hidden dangers, trials and treachery from others; great difficulties to overcome.",
-      "12": "The Sacrifice -- anxiety of mind; a risk of being used for others' plans.",
+      "12": "The Sacrifice: anxiety of mind; a risk of being used for others' plans.",
       "13": "Upheaval and change; power that destroys if misused; 'not unfortunate as supposed', but a number of warning.",
       "14": "Movement and dealings with people; luck with money/speculation but real risk; act with caution.",
       "15": "Magic, mystery and eloquence; favourable for gifts, money and the arts; a deep occult pull.",
-      "16": "The Shattered Citadel -- a warning of accident and the collapse of plans; plan ahead to avert it.",
-      "17": "The Star of the Magi -- highly spiritual; rises above trials; a number of a lasting name.",
+      "16": "The Shattered Citadel: a warning of accident and the collapse of plans; plan ahead to avert it.",
+      "17": "The Star of the Magi: highly spiritual; rises above trials; a number of a lasting name.",
       "18": "Materialism against the spiritual; quarrels, upheaval and treachery; use with great care.",
-      "19": "The Prince of Heaven / the Sun -- very fortunate: happiness, success and honour.",
-      "20": "The Awakening -- a call to a new purpose or cause; not a material number.",
-      "21": "The Crown of the Magi -- advancement and honours; 'victory after a long fight'.",
+      "19": "The Prince of Heaven / the Sun: very fortunate: happiness, success and honour.",
+      "20": "The Awakening: a call to a new purpose or cause; not a material number.",
+      "21": "The Crown of the Magi: advancement and honours; 'victory after a long fight'.",
       "22": "A warning of illusion and false judgement; a good person misled by others.",
-      "23": "The Royal Star of the Lion -- success and help from those in high places; very fortunate.",
-      "24": "Fortunate -- gain through people of rank and through love.",
+      "23": "The Royal Star of the Lion: success and help from those in high places; very fortunate.",
+      "24": "Fortunate: gain through people of rank and through love.",
       "25": "Strength gained through hard experience; favourable for the future.",
-      "26": "Grave warnings -- losses through bad partnerships, speculation and advice.",
-      "27": "A good number -- authority, power and command; carry out your own ideas.",
-      "28": "Full of contradiction -- great promise but risk of loss through others; provide for the future.",
+      "26": "Grave warnings: losses through bad partnerships, speculation and advice.",
+      "27": "A good number: authority, power and command; carry out your own ideas.",
+      "28": "Full of contradiction: great promise but risk of loss through others; provide for the future.",
       "29": "Uncertainty, unreliable friends and treachery; a warning, often through relationships.",
       "30": "Thoughtful, mentally superior; sets material things aside; neither fortunate nor unfortunate.",
       "31": "Like 30 but more self-contained and isolated; not fortunate materially.",
       "32": "Magical, persuasive power over groups; fortunate if you hold to your own judgement.",
-      "33": "Same as 24 -- gain through people of rank and through love.",
-      "34": "Same as 25 -- strength through experience.",
-      "35": "Same as 26 -- warnings around partnerships.",
-      "36": "Same as 27 -- authority and command.",
+      "33": "Same as 24: gain through people of rank and through love.",
+      "34": "Same as 25: strength through experience.",
+      "35": "Same as 26: warnings around partnerships.",
+      "36": "Same as 27: authority and command.",
       "37": "Good fortune in friendship, love and partnerships.",
-      "38": "Same as 29 -- uncertainty and unreliable friends.",
-      "39": "Same as 30 -- thoughtful and mental.",
-      "40": "Same as 31 -- self-contained, isolated.",
-      "41": "Same as 32 -- persuasive power if self-guided.",
-      "42": "Same as 24 -- gain through rank and love.",
-      "43": "An unfortunate number -- revolution, upheaval and failure.",
-      "44": "Same as 26 -- warnings around partnerships.",
-      "45": "Same as 27 -- authority and command.",
-      "46": "Same as 37 -- fortunate friendships and partnerships.",
-      "47": "Same as 29 -- uncertainty and unreliable friends.",
-      "48": "Same as 30 -- thoughtful and mental.",
-      "49": "Same as 31 -- self-contained, isolated.",
-      "50": "Same as 32 -- persuasive power if self-guided.",
-      "51": "Very powerful -- the warrior; sudden advancement, but danger from enemies.",
-      "52": "Same as 43 -- upheaval and reversal."
+      "38": "Same as 29: uncertainty and unreliable friends.",
+      "39": "Same as 30: thoughtful and mental.",
+      "40": "Same as 31: self-contained, isolated.",
+      "41": "Same as 32: persuasive power if self-guided.",
+      "42": "Same as 24: gain through rank and love.",
+      "43": "An unfortunate number: revolution, upheaval and failure.",
+      "44": "Same as 26: warnings around partnerships.",
+      "45": "Same as 27: authority and command.",
+      "46": "Same as 37: fortunate friendships and partnerships.",
+      "47": "Same as 29: uncertainty and unreliable friends.",
+      "48": "Same as 30: thoughtful and mental.",
+      "49": "Same as 31: self-contained, isolated.",
+      "50": "Same as 32: persuasive power if self-guided.",
+      "51": "Very powerful: the warrior; sudden advancement, but danger from enemies.",
+      "52": "Same as 43: upheaval and reversal."
     }
   },
   "pythagorean_arrows": {
     "_about": "Western (Pythagorean) numerology reads the birth-grid's full lines as named 'arrows': a line fully present is an arrow of strength, a line fully empty is an arrow of weakness. These cross-reference the Lo Shu planes.",
     "lines": [
-      { "nums": [1,5,9], "strength": "Arrow of Determination -- persistence and drive (can harden into stubbornness).", "weakness": "Arrow of Frustration -- a scattered will; expectations often unmet." },
-      { "nums": [3,5,7], "strength": "Arrow of Spirituality -- calm, intuitive, a peace-giving presence.", "weakness": "Arrow of the Sceptic -- needs to test everything; prone to doubt and worry." },
-      { "nums": [3,6,9], "strength": "Arrow of the Intellect -- a sharp, active mind and memory.", "weakness": "Arrow of Poor Memory -- the mind must be kept exercised." },
-      { "nums": [2,5,8], "strength": "Arrow of Emotional Balance -- steady feelings and strong intuition.", "weakness": "Arrow of Hypersensitivity -- easily hurt; feelings are guarded." },
-      { "nums": [1,4,7], "strength": "Arrow of Practicality -- capable, hands-on, gets things done.", "weakness": "Arrow of Disorder -- ideas stay theoretical without a system." },
-      { "nums": [1,2,3], "strength": "Arrow of the Planner -- loves order, method and organising.", "weakness": "Arrow of Procrastination -- plans delayed or left undone." },
-      { "nums": [4,5,6], "strength": "Arrow of Will -- strong-willed, determined life-force.", "weakness": "Arrow of Passivity -- thinks and plans, but must push to act." },
-      { "nums": [7,8,9], "strength": "Arrow of Activity -- forceful and expressive (watch over-drive).", "weakness": "Arrow of Inactivity -- energy must be roused into action." }
+      { "nums": [1,5,9], "strength": "Arrow of Determination: persistence and drive (can harden into stubbornness).", "weakness": "Arrow of Frustration: a scattered will; expectations often unmet." },
+      { "nums": [3,5,7], "strength": "Arrow of Spirituality: calm, intuitive, a peace-giving presence.", "weakness": "Arrow of the Sceptic: needs to test everything; prone to doubt and worry." },
+      { "nums": [3,6,9], "strength": "Arrow of the Intellect: a sharp, active mind and memory.", "weakness": "Arrow of Poor Memory: the mind must be kept exercised." },
+      { "nums": [2,5,8], "strength": "Arrow of Emotional Balance: steady feelings and strong intuition.", "weakness": "Arrow of Hypersensitivity: easily hurt; feelings are guarded." },
+      { "nums": [1,4,7], "strength": "Arrow of Practicality: capable, hands-on, gets things done.", "weakness": "Arrow of Disorder: ideas stay theoretical without a system." },
+      { "nums": [1,2,3], "strength": "Arrow of the Planner: loves order, method and organising.", "weakness": "Arrow of Procrastination: plans delayed or left undone." },
+      { "nums": [4,5,6], "strength": "Arrow of Will: strong-willed, determined life-force.", "weakness": "Arrow of Passivity: thinks and plans, but must push to act." },
+      { "nums": [7,8,9], "strength": "Arrow of Activity: forceful and expressive (watch over-drive).", "weakness": "Arrow of Inactivity: energy must be roused into action." }
     ]
   },
   "classical_corroboration": {
     "_about": "Where the classical sources agree on a number's nature it is stated once; where they differ the variant is noted.",
     "by_number": {
-      "1": { "planet": "Sun (sources agree)", "reading": "Leadership, individuality and ambition -- consistent across sources." },
+      "1": { "planet": "Sun (sources agree)", "reading": "Leadership, individuality and ambition, consistent across sources." },
       "2": { "planet": "Moon (agree)", "reading": "Sensitive, diplomatic and imaginative; can be over-emotional." },
       "3": { "planet": "Jupiter (agree)", "reading": "Expressive, optimistic and knowledge-loving; rises to responsibility." },
-      "4": { "planet": "Vedic: Rahu; classical Western: Uranus", "reading": "Unconventional, hard-working and reform-minded, with a struggle/discipline theme; some Western texts instead read 4 as steady and practical -- a notable variation." },
-      "5": { "planet": "Mercury (agree)", "reading": "Versatile, communicative, freedom-loving and quick -- the universal balancer." },
+      "4": { "planet": "Vedic: Rahu; classical Western: Uranus", "reading": "Unconventional, hard-working and reform-minded, with a struggle/discipline theme; some Western texts instead read 4 as steady and practical, a notable variation." },
+      "5": { "planet": "Mercury (agree)", "reading": "Versatile, communicative, freedom-loving and quick, the universal balancer." },
       "6": { "planet": "Venus (agree)", "reading": "Love, beauty, home and responsibility; nurturing and drawn to comfort." },
       "7": { "planet": "Vedic: Ketu; classical Western: Neptune", "reading": "Intuitive, researching, spiritual and restless; learns by experience." },
       "8": { "planet": "Saturn (agree)", "reading": "Discipline and karma; material and spiritual extremes; success through persistence." },
-      "9": { "planet": "Mars (agree)", "reading": "Courage, drive, idealism and temper -- the fighter and the humanitarian." }
+      "9": { "planet": "Mars (agree)", "reading": "Courage, drive, idealism and temper, the fighter and the humanitarian." }
     }
+  },
+  "lucky_unlucky_pairs": {
+    "_about": "Per-number friends / non-friends / neutral, used to derive a person's lucky and unlucky numbers by combining the Driver and the Conductor.",
+    "_pending": "Numbers 4 and 8 are marked specially in the source for rows 3, 4 and 8 (treated here as conditional non-friends, pending confirmation); an extra mark after 7 in row 3 is unread.",
+    "by_number": {
+      "1": { "friends": [9,2,5,3,6,1], "non_friends": [8], "neutral": [4,7] },
+      "2": { "friends": [1,5,3,2], "non_friends": [8,4,9], "neutral": [6,7] },
+      "3": { "friends": [1,5,3,2,7], "non_friends": [6,8], "neutral": [4,8,9,7] },
+      "4": { "friends": [7,1,5,6,4,8], "non_friends": [4,8,2,9], "neutral": [3] },
+      "5": { "friends": [1,2,3,6,5], "non_friends": [], "neutral": [7,8,9,4] },
+      "6": { "friends": [1,5,7,6], "non_friends": [3], "neutral": [8,9,2,4] },
+      "7": { "friends": [4,6,1,3,5], "non_friends": [], "neutral": [8,2,9,7] },
+      "8": { "friends": [5,6,3,7,4,8], "non_friends": [4,8,1,2], "neutral": [9] },
+      "9": { "friends": [1,5,3], "non_friends": [4,2], "neutral": [6,7,9,8] }
+    },
+    "conditional_numbers": [4,8],
+    "combination_rule": "Personal lucky numbers = the Driver's and Conductor's friends combined, minus any number that is a non-friend of either. Personal unlucky numbers = the Driver's and Conductor's non-friends combined.",
+    "example": "20-10-1983 -> Driver 2, Conductor 6 -> lucky 1, 2, 5, 6, 7; unlucky 3, 4, 8, 9."
   }
 };
 </script>
@@ -6358,6 +6376,7 @@ function generateReport(){
   const lowConf=[], secConf=[];
   const flag=(label)=>'';
   const soft=(label)=>'';
+  const G = gender==='M' ? {Sub:'He',sub:'he',Pos:'His',pos:'his',obj:'him'} : {Sub:'She',sub:'she',Pos:'Her',pos:'her',obj:'her'};
 
   const D=driverNumber(dob.day), C=conductorNumber(dob.day,dob.month,dob.year);
   const N=nameNumber(name,KB), K=kuaNumber(dob.year,gender);
@@ -6381,13 +6400,13 @@ function generateReport(){
   const sec=(t)=>{ add('<h3>'+esc(t)+'</h3>','\n## '+t+'\n'); };
 
   // tests gate
-  if(!testsOK) add('<div class="warn"><strong>Self-tests are failing.</strong> This report cannot claim correctness — open the test badge in the header to see which checks fail (often caused by KB edits).</div>','> **WARNING: built-in self-tests are failing; numbers below are not certified.**\n');
+  if(!testsOK) add('<div class="warn"><strong>Self-tests are failing.</strong> This report cannot claim correctness, open the test badge in the header to see which checks fail (often caused by KB edits).</div>','> **WARNING: built-in self-tests are failing; numbers below are not certified.**\n');
 
   // 1 Header/snapshot (Numerology tab)
   tabTo('num');
-  add('<h3 style="margin-top:0">Snapshot</h3>','# Numerology Life Report — '+name+'\n');
+  add('<h3 style="margin-top:0">Snapshot</h3>','# Numerology Life Report,'+name+'\n');
   let snap='<table class="plain"><tr><th>Name</th><td>'+esc(name)+'</td><th>DOB</th><td>'+esc(dob.str)+'</td></tr>'+
-    '<tr><th>Gender</th><td>'+(gender==='M'?'Male':'Female')+'</td><th>Time / Place</th><td>'+esc(tob||'—')+(place?' · '+esc(place):'')+' <span class="note">('+(geo?'resolved → '+geo.lat.toFixed(2)+', '+geo.lng.toFixed(2)+' UTC'+(geo.tz>=0?'+':'')+geo.tz+'; used for Moon sign only':'numerology uses the date only')+')</span></td></tr>'+
+    '<tr><th>Gender</th><td>'+(gender==='M'?'Male':'Female')+'</td><th>Time / Place</th><td>'+esc(tob||'-')+(place?' · '+esc(place):'')+' <span class="note">('+(geo?'resolved → '+geo.lat.toFixed(2)+', '+geo.lng.toFixed(2)+' UTC'+(geo.tz>=0?'+':'')+geo.tz+'; used for Moon sign only':'numerology uses the date only')+')</span></td></tr>'+
     '<tr><th>Driver (Mulank)</th><td><strong>'+D.value+'</strong> <span class="chain">'+chainTxt(D.chain)+'</span></td><th>Conductor (Bhagyank)</th><td><strong>'+C.value+'</strong> <span class="chain">'+chainTxt(C.chain)+'</span></td></tr>'+
     '<tr><th>Name number</th><td><strong>'+N.value+'</strong> <span class="chain">'+chainTxt(N.chain)+'</span></td><th>Kua</th><td><strong>'+K.value+'</strong></td></tr></table>';
   if(K.kua5){ snap+='<div class="okbox">'+esc(K.kua5)+'</div>'; }
@@ -6396,21 +6415,21 @@ function generateReport(){
   // 2 Core numbers explained
   sec('Core numbers explained');
   const nameBreak=N.perWord.map(w=>esc(w.word)+' = '+w.value).join(' · ');
-  add('<p><strong>Driver '+D.value+'</strong> — ruled by '+esc(profD.planet)+', the archetype of <em>'+esc(profD.archetype)+'</em>. Strengths: '+esc((profD.best||[]).join(', '))+'. Shadow side: '+esc((profD.worst||[]).join(', '))+'.</p>'+
-      '<p><strong>Conductor '+C.value+'</strong> — ruled by '+esc(profC.planet)+' ('+esc(profC.archetype)+'); this is the life-path current the Driver rides.</p>'+
-      '<p><strong>Name number '+N.value+'</strong> — Chaldean values: '+nameBreak+'; total '+N.total+' reduces '+chainTxt(N.chain)+'.</p>'+
+  add('<p><strong>Driver '+D.value+'</strong>,ruled by '+esc(profD.planet)+', the archetype of <em>'+esc(profD.archetype)+'</em>. Strengths: '+esc((profD.best||[]).join(', '))+'. Shadow side: '+esc((profD.worst||[]).join(', '))+'.</p>'+
+      '<p><strong>Conductor '+C.value+'</strong>,ruled by '+esc(profC.planet)+' ('+esc(profC.archetype)+'); this is the life-path current the Driver rides.</p>'+
+      '<p><strong>Name number '+N.value+'</strong>,Chaldean values: '+nameBreak+'; total '+N.total+' reduces '+chainTxt(N.chain)+'.</p>'+
       (function(){ const kp=KB.kua_profiles&&KB.kua_profiles[String(K.value)];
-        return '<p><strong>Kua '+K.value+'</strong> — derived from birth year '+dob.year+' ('+chainTxt(K.yearReduced.chain)+').'+
+        return '<p><strong>Kua '+K.value+'</strong>,derived from birth year '+dob.year+' ('+chainTxt(K.yearReduced.chain)+').'+
           (kp?' '+esc(kp.name)+': '+esc((kp.traits||[]).join(', '))+'. Element '+esc(kp.element)+'; auspicious direction '+esc(kp.direction)+' ('+esc(kp.direction_use||'')+').':'')+'</p>'; })());
 
   // 2b Soul Number
   const soulN=soulNumber(grid,KB);
   if(soulN){
     sec('Soul Number');
-    const lvlTxt={strong:'Both Soul Numbers (5 and 6) are present — the strongest reading: the chart is "very powerful".',
-      partial:'One Soul Number is present ('+(soulN.has6?'6 — Venus':'5 — Mercury')+'); the other is missing.',
-      weak:'Neither 5 nor 6 is present — the chart\'s "soul/current" is weak; remedies below help supply it.'}[soulN.level];
-    let sh='<p>His "Soul Numbers" are <strong>6 (Venus)</strong> and <strong>5 (Mercury)</strong> — the numbers the whole chart leans on for success, wealth and relationships. '+esc(lvlTxt)+'</p>';
+    const lvlTxt={strong:'Both Soul Numbers (5 and 6) are present, the strongest reading: the chart is "very powerful".',
+      partial:'One Soul Number is present ('+(soulN.has6?'6,Venus':'5,Mercury')+'); the other is missing.',
+      weak:'Neither 5 nor 6 is present, the chart\'s "soul/current" is weak; remedies below help supply it.'}[soulN.level];
+    let sh='<p>'+G.Pos+' "Soul Numbers" are <strong>6 (Venus)</strong> and <strong>5 (Mercury)</strong>,the numbers the whole chart leans on for success, wealth and relationships. '+esc(lvlTxt)+'</p>';
     if(!soulN.has6) sh+='<p class="note"><strong>To supply 6:</strong> '+esc(KB.soul_number.remedy_missing_6)+'</p>';
     if(!soulN.has5) sh+='<p class="note"><strong>To supply 5:</strong> '+esc(KB.soul_number.remedy_missing_5)+'</p>';
     sh+='<div class="src-tag">'+esc(KB.soul_number.source)+'</div>';
@@ -6420,7 +6439,7 @@ function generateReport(){
   // 3 D-C combination
   sec('Driver–Conductor combination ('+D.value+'-'+C.value+')');
   if(dc){
-    const stars = dc.stars_negative ? '<span class="stars" style="color:var(--bad)">negative — anti-planet (worst tier)</span>'
+    const stars = dc.stars_negative ? '<span class="stars" style="color:var(--bad)">negative, anti-planet (worst tier)</span>'
       : (typeof dc.stars==='number' ? '<span class="stars">'+'★'.repeat(Math.floor(dc.stars))+(dc.stars%1?'½':'')+'</span> ('+dc.stars+'/5)'
       : '<span class="note">star rating not captured from source</span>');
     let h='<p><strong>Band:</strong> '+esc(dc.band)+' · '+stars+(dc.needs_verification?soft('D-C cell '+D.value+'-'+C.value+''):'')+'</p>'+
@@ -6451,12 +6470,12 @@ function generateReport(){
   add(gh,mdGrid);
   let ph='';
   for(const [k,p] of Object.entries(ga.planes))
-    ph+='<p><strong>'+esc(k.replace(/_/g,' '))+'</strong> ['+p.numbers.join('-')+'] — '+esc(p.strength.label)+'. '+esc(p.complete?(p.if_complete||p.meaning):(p.if_incomplete||''))+'</p>';
+    ph+='<p><strong>'+esc(k.replace(/_/g,' '))+'</strong> ['+p.numbers.join('-')+'],'+esc(p.strength.label)+'. '+esc(p.complete?(p.if_complete||p.meaning):(p.if_incomplete||''))+'</p>';
   ph+='<p class="note">Plane strength scale (3 of 3 = excellent · 2 = good · 1 = okay · 0 = weak) per the school’s 8-yogas chapter.</p>';
   for(const [k,y] of Object.entries(ga.yogas))
-    if(y.present) ph+='<p><strong>'+esc(k.replace(/_/g,' '))+'</strong> ('+esc(y.aka||'')+') present — '+esc(y.meaning)+' '+esc(y.rarity||'')+'</p>';
+    if(y.present) ph+='<p><strong>'+esc(k.replace(/_/g,' '))+'</strong> ('+esc(y.aka||'')+') present,'+esc(y.meaning)+' '+esc(y.rarity||'')+'</p>';
   const cs=chartStrength(grid,KB);
-  ph+='<p><strong>Overall chart strength:</strong> '+esc(cs.band)+' — '+cs.completeCount+' of 8 lines complete'+(cs.topPresent.length?'; top-3 line(s) present: '+esc(cs.topPresent.join(', ')):'; no top-3 line (4-5-6 / 2-5-8 / 9-5-1) complete')+'. <span class="note">(line-completion rule)</span></p>';
+  ph+='<p><strong>Overall chart strength:</strong> '+esc(cs.band)+','+cs.completeCount+' of 8 lines complete'+(cs.topPresent.length?'; top-3 line(s) present: '+esc(cs.topPresent.join(', ')):'; no top-3 line (4-5-6 / 2-5-8 / 9-5-1) complete')+'. <span class="note">(line-completion rule)</span></p>';
   if(ga.repeated.length){
     const rn=KB.lo_shu_grid.repeated_numbers||{};
     const lines=ga.repeated.map(n=>{
@@ -6471,9 +6490,9 @@ function generateReport(){
   // 5 Personality & communication
   sec('Personality & communication');
   const mind=ga.planes.mind_plane,soul=ga.planes.soul_plane,prac=ga.planes.practical_plane;
-  add('<p>Mentally, this chart is '+(mind.complete?'organised and analytical — the full mind plane supports memory, planning and decision-making':'guided more by instinct than systematic analysis; the incomplete mind plane suggests building external structure (lists, routines) pays off')+'.</p>'+
-      '<p>Emotionally, '+(soul.complete?'the complete soul plane indicates depth of feeling, intuition and compassion in how they connect and communicate':'the incomplete soul plane suggests feelings are kept private; communication tends to be matter-of-fact rather than expressive')+'.</p>'+
-      '<p>Practically, '+(prac.complete?'the complete practical plane gives strong follow-through — ideas become tangible results':'execution benefits from partners or systems that push ideas to completion, as the practical plane is not fully occupied')+'.</p>');
+  add('<p>Mentally, this chart is '+(mind.complete?'organised and analytical, the full mind plane supports memory, planning and decision-making':'guided more by instinct than systematic analysis; the incomplete mind plane suggests building external structure (lists, routines) pays off')+'.</p>'+
+      '<p>Emotionally, '+(soul.complete?'the complete soul plane indicates depth of feeling, intuition and compassion in how '+G.sub+' connects and communicates':'the incomplete soul plane suggests feelings are kept private; communication tends to be matter-of-fact rather than expressive')+'.</p>'+
+      '<p>Practically, '+(prac.complete?'the complete practical plane gives strong follow-through, ideas become tangible results':'execution benefits from partners or systems that push ideas to completion, as the practical plane is not fully occupied')+'.</p>');
   const bm=birthMonthProfile(dob.month,KB);
   if(bm) add('<p><strong>Born-month temperament (month '+dob.month+' → '+esc(bm.planet)+'):</strong> '+esc(bm.note)+(bm.planet_mapped_only?' <span class="note">(planet-mapped; the source set lacked a dedicated Jan/Feb reference)</span>':'')+' <span class="src-tag">'+esc(KB.birth_month.source)+'</span></p>');
 
@@ -6491,10 +6510,10 @@ function generateReport(){
     const C2=k=>ga.planes[k]&&ga.planes[k].complete;
     const cnt=n=>grid[n]||0;
     const sl=[];
-    if(sig.wealth) sl.push('<li><strong>Wealth:</strong> '+(C2('practical_plane')?'':'')+ (cnt(2)&&cnt(5)&&cnt(8)?'2-5-8 line present — wealth / real-estate yog':'2-5-8 line not complete'+(cnt(8)&&!(cnt(2)&&cnt(5))?' (8 without 2&5 — the method advises caution with real estate)':''))+'</li>');
-    if(sig.marriage) sl.push('<li><strong>Marriage:</strong> '+(cnt(6)?'number 6 (Venus) present — supports timely marriage':'number 6 absent — the method flags this as a marriage-delay signal')+'</li>');
-    if(sig.education) sl.push('<li><strong>Education:</strong> '+(cnt(3)?'number 3 (Jupiter) present — supports higher study / research':'number 3 absent')+'</li>');
-    if(sig.health){ const h7=cnt(7)>=2,h2=cnt(2)>2; sl.push('<li><strong>Health:</strong> '+([h7?'7 appears '+cnt(7)+'×':null,h2?'2 appears '+cnt(2)+'×':null].filter(Boolean).join('; ')||'no 7/2 repetition signal')+(h7||h2?' — the method ties these to a weaker health sector':'')+'</li>'); }
+    if(sig.wealth) sl.push('<li><strong>Wealth:</strong> '+(C2('practical_plane')?'':'')+ (cnt(2)&&cnt(5)&&cnt(8)?'2-5-8 line present, wealth / real-estate yog':'2-5-8 line not complete'+(cnt(8)&&!(cnt(2)&&cnt(5))?' (8 without 2&5, the method advises caution with real estate)':''))+'</li>');
+    if(sig.marriage) sl.push('<li><strong>Marriage:</strong> '+(cnt(6)?'number 6 (Venus) present, supports timely marriage':'number 6 absent, the method flags this as a marriage-delay signal')+'</li>');
+    if(sig.education) sl.push('<li><strong>Education:</strong> '+(cnt(3)?'number 3 (Jupiter) present, supports higher study / research':'number 3 absent')+'</li>');
+    if(sig.health){ const h7=cnt(7)>=2,h2=cnt(2)>2; sl.push('<li><strong>Health:</strong> '+([h7?'7 appears '+cnt(7)+'×':null,h2?'2 appears '+cnt(2)+'×':null].filter(Boolean).join('; ')||'no 7/2 repetition signal')+(h7||h2?', the method ties these to a weaker health sector':'')+'</li>'); }
     if(sig.job_vs_business){ const jb=sig.job_vs_business; const path=jb.business_drivers.includes(D.value)?'business / entrepreneurship':jb.job_drivers.includes(D.value)?'job (comfortable as an employee)':'either job or business'; sl.push('<li><strong>Job vs business:</strong> Driver '+D.value+' → '+path+'</li>'); }
     if(sig.career_streams){ const cs=sig.career_streams; const fit=[]; for(const [k,nums] of Object.entries(cs)){ if(k==='source') continue; if(nums.every(x=>cnt(x))) fit.push(k.replace(/_/g,'/')); } if(fit.length) sl.push('<li><strong>Career streams indicated</strong> (all required numbers present): '+esc(fit.join(', '))+'</li>'); }
     sh+='<p style="margin-top:10px"><strong>Sector signals:</strong></p><ul>'+sl.join('')+'</ul><p class="note">The OK/Good/Very-Good banding is a heuristic.</p>';
@@ -6505,13 +6524,13 @@ function generateReport(){
   sec('Career & vocation');
   const dcCareers=dc&&dc.careers&&dc.careers.length?dc.careers:[];
   const profCareers=(profD.careers||[]).filter(c=>!dcCareers.includes(c));
-  add('<p>From the Driver–Conductor combination, well-aligned fields are: <strong>'+esc(dcCareers.join(', ')||'—')+'</strong>.</p>'+
+  add('<p>From the Driver–Conductor combination, well-aligned fields are: <strong>'+esc(dcCareers.join(', ')||'-')+'</strong>.</p>'+
       '<p>The Driver number '+D.value+' ('+esc(profD.planet)+') further supports: '+esc(profCareers.slice(0,8).join(', '))+'.</p>');
 
   // 8 Lucky name
   sec('Lucky name (current vs recommended)');
   let nh='<p>Current name value: <strong>'+N.value+'</strong> ('+nameBreak+'; total '+N.total+').</p>';
-  if(nt&&nt.ordered.length) nh+='<p class="note">Per the method’s rule the name total should land on one of {1,5,6,3} (never 4/8) and suit both Driver '+D.value+' and Conductor '+C.value+'. Preferred target order here: <strong>'+nt.ordered.join(', ')+'</strong>; avoid '+(nt.avoid.join(', ')||'—')+'.</p>';
+  if(nt&&nt.ordered.length) nh+='<p class="note">Per the method’s rule the name total should land on one of {1,5,6,3} (never 4/8) and suit both Driver '+D.value+' and Conductor '+C.value+'. Preferred target order here: <strong>'+nt.ordered.join(', ')+'</strong>; avoid '+(nt.avoid.join(', ')||'-')+'.</p>';
   if(targetsSecondary&&targets) nh+='<p class="note">Target set ['+targets.join(', ')+'] comes from the secondary-sourced friendship row'+soft('Name-correction targets based on secondary-sourced friendship row')+'</p>';
   if(nc.alreadyLucky){ nh+='<div class="okbox">The current name number '+N.value+' already falls in the lucky set ['+targets.join(', ')+'] for Driver '+D.value+'. No change suggested.</div>'; }
   else if(nc.suggestions&&nc.suggestions.length){
@@ -6535,7 +6554,7 @@ function generateReport(){
     add('<p>For Driver '+D.value+', aim for these single-digit totals on numbered assets: <strong>'+ar.rec.join(', ')+'</strong>; avoid <strong>'+ar.avoid.join(', ')+'</strong>'+(ar.note?' ('+esc(ar.note)+')':'')+'. '+esc(an.universal_rules[1])+' '+esc(an.universal_rules[2])+'</p>'+
         '<table class="plain"><tr><th>Asset</th><th>How to total it</th></tr>'+
         Object.entries(an.per_asset).filter(([k])=>['bank_account','mobile','vehicle','house','atm_pin'].includes(k)).map(([k,v])=>'<tr><td>'+esc(k.replace(/_/g,' '))+'</td><td>'+esc(v.method)+'</td></tr>').join('')+'</table>'+
-        (function(){ const wb=watchBraceletRemedy(grid,KB); return '<p><strong>Wrist watch:</strong> '+esc(wb.watch)+' ('+esc(wb.watchReason)+'). <strong>Bracelet:</strong> wear a crystal bracelet'+(wb.braceletMiss.length?' — recommended (you are missing '+wb.braceletMiss.join(', ')+')':'')+'.</p>'; })()+
+        (function(){ const wb=watchBraceletRemedy(grid,KB); return '<p><strong>Wrist watch:</strong> '+esc(wb.watch)+' ('+esc(wb.watchReason)+'). <strong>Bracelet:</strong> wear a crystal bracelet'+(wb.braceletMiss.length?',recommended (you are missing '+wb.braceletMiss.join(', ')+')':'')+'.</p>'; })()+
         '<div class="src-tag">'+esc(an.per_asset.bank_account.source)+'</div>',
         '\n## Lucky asset numbers\nAim for totals: '+ar.rec.join(', ')+' | avoid: '+ar.avoid.join(', ')+'\n');
   }
@@ -6549,12 +6568,12 @@ function generateReport(){
       sec('Blessing number');
       add('<p>Derived from the birth year only ('+dob.year+' → '+yt+'); for '+(gender==='M'?'males, 11 − '+yt:'females, '+yt+' + 4')+' = <strong>'+bVal+'</strong>'+(bRaw!==bVal?' (from '+bRaw+')':'')+'.</p>'+
           '<p>'+esc(KB.blessing_number.general||'')+'</p>'+
-          '<p class="note">'+(has(bVal)?'Your blessing number '+bVal+' is already present in your chart, so its "wild-card" effect is muted.':'Your blessing number '+bVal+' is absent from your date, month and year — the method says it then carries its full effect, especially if it completes a grid line.')+'</p>');
+          '<p class="note">'+(has(bVal)?'Your blessing number '+bVal+' is already present in your chart, so its "wild-card" effect is muted.':'Your blessing number '+bVal+' is absent from your date, month and year, the method says it then carries its full effect, especially if it completes a grid line.')+'</p>');
     }
     if(KB.karmic_numbers){
       sec('Karmic number');
       const km=KB.karmic_numbers.by_day&&KB.karmic_numbers.by_day[String(dob.day)];
-      if(km) add('<p>Born on the <strong>'+dob.day+'</strong> — a karmic-debt date in this method: '+esc(km)+'</p><p class="note">'+esc(KB.karmic_numbers.remedy_note||'')+'</p>');
+      if(km) add('<p>Born on the <strong>'+dob.day+'</strong>,a karmic-debt date in this method: '+esc(km)+'</p><p class="note">'+esc(KB.karmic_numbers.remedy_note||'')+'</p>');
       else add('<p>Your birth day ('+dob.day+') is not one of the karmic-debt dates ('+(KB.karmic_numbers.days||[]).join(', ')+'), so this rule flags no past-life "debt".</p>');
     }
     if(KB.master_numbers){
@@ -6564,7 +6583,7 @@ function generateReport(){
     if(KB.ishta_dev && KB.ishta_dev[String(D.value)]){
       const idv=KB.ishta_dev[String(D.value)];
       sec('Ishta Dev (presiding deity)');
-      add('<p>For Driver '+D.value+' ('+esc(idv.planet||profD.planet)+') the method names <strong>'+esc(idv.deity)+'</strong>'+(idv.practice?' — '+esc(idv.practice):'')+'.</p>');
+      add('<p>For Driver '+D.value+' ('+esc(idv.planet||profD.planet)+') the method names <strong>'+esc(idv.deity)+'</strong>'+(idv.practice?','+esc(idv.practice):'')+'.</p>');
     }
     if(KB.complementary_numbers && ga.missing && ga.missing.length){
       const mp=KB.complementary_numbers.map||{};
@@ -6573,9 +6592,9 @@ function generateReport(){
     }
     if(KB.investing_style){
       const tips=[];
-      tips.push('<li><strong>Stock market:</strong> '+(has(6)?(has(5)?'5 and 6 both present — the strongest configuration':'6 present — supported'):'6 absent — '+(has(3)&&has(7)?'consider advising/broking rather than trading your own money':'the method advises caution'))+'</li>');
-      tips.push('<li><strong>Property:</strong> '+((has(2)&&has(5)&&has(8))?'2, 5 and 8 present — strongly favoured':((has(5)&&has(8))?'5 and 8 present — favoured':((has(2)&&has(5))?'2 and 5 present — acceptable':((has(2)&&has(8)&&!has(5))?'2 and 8 without 5 — called risky':'mixed signals'))))+'</li>');
-      tips.push('<li><strong>Gold:</strong> '+(has(6)?'6 present — favoured':'6 absent — less favoured')+' · <strong>Silver:</strong> '+(has(7)?'7 present — favoured':'7 absent — less favoured')+'</li>');
+      tips.push('<li><strong>Stock market:</strong> '+(has(6)?(has(5)?'5 and 6 both present, the strongest configuration':'6 present, supported'):'6 absent, '+(has(3)&&has(7)?'consider advising/broking rather than trading your own money':'the method advises caution'))+'</li>');
+      tips.push('<li><strong>Property:</strong> '+((has(2)&&has(5)&&has(8))?'2, 5 and 8 present, strongly favoured':((has(5)&&has(8))?'5 and 8 present, favoured':((has(2)&&has(5))?'2 and 5 present, acceptable':((has(2)&&has(8)&&!has(5))?'2 and 8 without 5, called risky':'mixed signals'))))+'</li>');
+      tips.push('<li><strong>Gold:</strong> '+(has(6)?'6 present, favoured':'6 absent, less favoured')+' · <strong>Silver:</strong> '+(has(7)?'7 present, favoured':'7 absent, less favoured')+'</li>');
       sec('Investing style'); add('<ul>'+tips.join('')+'</ul><p class="note">General guidance, not financial advice.</p>');
     }
     if(KB.daily_rules && KB.daily_rules.rules){ sec('Daily habits'); add('<ul>'+KB.daily_rules.rules.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>'); }
@@ -6619,14 +6638,36 @@ function generateReport(){
     }
   } catch(e){ /* book cross-references are optional */ }
 
+  // 8e Lucky & unlucky numbers (paired Driver + Conductor, from friends/non-friends table)
+  try {
+    const lup=KB.lucky_unlucky_pairs;
+    if(lup && lup.by_number){
+      const dr=lup.by_number[String(D.value)], cn=lup.by_number[String(C.value)];
+      if(dr && cn){
+        const uniq=a=>Array.from(new Set(a));
+        const bad=uniq([].concat(dr.non_friends||[],cn.non_friends||[])).sort((a,b)=>a-b);
+        const fr2=uniq([].concat(dr.friends||[],cn.friends||[]));
+        const lucky=fr2.filter(n=>bad.indexOf(n)<0).sort((a,b)=>a-b);
+        const neu=uniq([].concat(dr.neutral||[],cn.neutral||[])).filter(n=>bad.indexOf(n)<0&&lucky.indexOf(n)<0).sort((a,b)=>a-b);
+        sec('Lucky & unlucky numbers (Driver + Conductor paired)');
+        add('<p>Combining Driver '+D.value+' and Conductor '+C.value+' by the paired friends / non-friends method:</p>'+
+          '<table class="plain"><tr><th>Lucky</th><td>'+(lucky.join(', ')||'-')+'</td></tr>'+
+          '<tr><th>Unlucky</th><td>'+(bad.join(', ')||'-')+'</td></tr>'+
+          '<tr><th>Neutral</th><td>'+(neu.join(', ')||'-')+'</td></tr></table>'+
+          '<p class="note">'+esc(lup.combination_rule||'')+'</p>'+
+          (lup.source?'<div class="src-tag">'+esc(lup.source)+'</div>':''));
+      }
+    }
+  } catch(e){ /* paired lucky/unlucky is optional */ }
+
   // 9 Remedies
   sec('Remedies');
   const rem=KB.remedies.by_number[String(D.value)]||{};
   let rh='<p>Keyed to the Driver planet ('+esc(profD.planet)+'):</p><ul>'+
     '<li><strong>Colours:</strong> '+esc((rem.colour||[]).join(', '))+'</li>'+
-    '<li><strong>Gemstone:</strong> '+esc(rem.gemstone||'—')+'</li>'+
-    '<li><strong>Mantra:</strong> '+esc(rem.mantra||'—')+'</li>'+
-    '<li><strong>Charity / practice:</strong> '+esc(rem.charity||'—')+'</li></ul>';
+    '<li><strong>Gemstone:</strong> '+esc(rem.gemstone||'-')+'</li>'+
+    '<li><strong>Mantra:</strong> '+esc(rem.mantra||'-')+'</li>'+
+    '<li><strong>Charity / practice:</strong> '+esc(rem.charity||'-')+'</li></ul>';
   if(ga.missing.length){
     rh+='<p><strong>For missing numbers:</strong></p><ul>'+ga.missing.map(n=>{
       const mn=KB.lo_shu_grid.missing_numbers[String(n)]||{};
@@ -6644,7 +6685,7 @@ function generateReport(){
   let pymd='\n| Year | PY | Theme | Flag |\n|---|---|---|---|\n';
   for(const r of pys){ py+='<tr><td>'+r.year+'</td><td>'+r.py+'</td><td>'+esc(r.theme)+'</td><td>'+esc(r.flag)+'</td></tr>'; pymd+='| '+r.year+' | '+r.py+' | '+r.theme+' | '+r.flag+' |\n'; }
   const ap=activePersonalYear(dob.day,dob.month,new Date());
-  py+='</table><p class="note"><strong>Personal year changes on 5 February</strong>. As of today you are in the '+ap.cycleYear+' cycle — Personal Year '+ap.py+(ap.beforeFeb5?' (before 5 Feb, so still the previous year’s number)':'')+'. PY = reduce(reduced day + reduced month + reduced cycle-year); formula validated.</p>';
+  py+='</table><p class="note"><strong>Personal year changes on 5 February</strong>. As of today you are in the '+ap.cycleYear+' cycle,Personal Year '+ap.py+(ap.beforeFeb5?' (before 5 Feb, so still the previous year’s number)':'')+'. PY = reduce(reduced day + reduced month + reduced cycle-year); formula validated.</p>';
   // health danger years (per-driver personal-year rule)
   const hdy=healthDangerYears(D.value,dob.day,dob.month,repYear,10,KB);
   if(hdy){
@@ -6664,7 +6705,7 @@ function generateReport(){
     else if(dcol){ lc=dcol.lucky; uc=dcol.unlucky; colNote=''; }
     else { lc=deriveColours(fr.friendly,KB); uc=deriveColours(fr.enemy,KB); colNote=flag('Lucky/unlucky colours derived from planet own-colours, no direct source'); }
     let mark='';
-    if(!fr.confirmed) mark=soft('Lucky-number row for Driver '+D.value+' is from the school compatibility chapter — owner should confirm (the two sheet-confirmed rows are stricter than the raw chart)');
+    if(!fr.confirmed) mark=soft('Lucky-number row for Driver '+D.value+' is from the school compatibility chapter, owner should confirm (the two sheet-confirmed rows are stricter than the raw chart)');
     add('<table class="plain"><tr><th>Lucky numbers</th><td>'+fr.friendly.join(', ')+(mark?' '+mark:'')+'</td></tr>'+
         '<tr><th>Neutral</th><td>'+(fr.neutral||[]).join(', ')+'</td></tr>'+
         '<tr><th>Unlucky numbers</th><td>'+(fr.enemy||[]).join(', ')+'</td></tr>'+
@@ -6688,7 +6729,7 @@ function generateReport(){
     sec('Astrology snapshot');
     add('<div class="note">Astrology is a separate discipline from the numerology tab. Sun signs come from your date; Moon sign &amp; Nakshatra need birth time (and a place for timezone) and are computed by approximation. '+esc(KB.astrology.disclaimer)+'</div>');
     if(ws){
-      add('<p><strong>Western (tropical) sun sign:</strong> '+esc(ws.name)+' — '+esc(ws.element)+', '+esc(ws.modality)+', ruled by '+esc(ws.ruler)+'.</p>'+
+      add('<p><strong>Western (tropical) sun sign:</strong> '+esc(ws.name)+','+esc(ws.element)+', '+esc(ws.modality)+', ruled by '+esc(ws.ruler)+'.</p>'+
           '<p>Traits: '+esc(ws.traits.join(', '))+'. <strong>Strengths:</strong> '+esc(ws.strengths.join(', '))+'. <strong>Watch:</strong> '+esc(ws.challenges.join(', '))+'.</p>',
           '\n## Astrology snapshot\nWestern sun sign: '+ws.name+' ('+ws.element+', '+ws.modality+', ruler '+ws.ruler+')\n');
     }
@@ -6712,29 +6753,29 @@ function generateReport(){
     const dcCareers=(dc&&dc.careers)?dc.careers:[];
 
     sec('Marriage & relationships');
-    add('<p><strong>Numerology:</strong> '+(cnt(6)?'number 6 (Venus) is present, which the method treats as a marriage catalyst':'number 6 (Venus) is absent — the method flags this as a delay signal, addressable by remedy')+'. '+
+    add('<p><strong>Numerology:</strong> '+(cnt(6)?'number 6 (Venus) is present, which the method treats as a marriage catalyst':'number 6 (Venus) is absent, the method flags this as a delay signal, addressable by remedy')+'. '+
         'Driver '+D.value+' favours marriage in personal years the method lists; check the Future-trends table for upcoming PYs.'+(dc&&dc.relationship?' Combination note: '+esc(dc.relationship):'')+'</p>'+eGuide('marriage'));
 
     sec('Partnership & business compatibility');
     const pr=partnershipRisk(grid,KB);
     if(pr) add('<p><strong>Numerology:</strong> '+(pr.sevens>=2
-        ? 'number 7 (Ketu) appears '+pr.sevens+'× — the method flags this as a strong betrayal/partnership-break signal'+(pr.risk==='high'?' (and with 5 & 6 also weak, the highest-risk configuration)':'')+', and advises caution with business partnerships.'
+        ? 'number 7 (Ketu) appears '+pr.sevens+'×,the method flags this as a strong betrayal/partnership-break signal'+(pr.risk==='high'?' (and with 5 & 6 also weak, the highest-risk configuration)':'')+', and advises caution with business partnerships.'
         : 'no multiple-7 partnership-risk signal; '+(pr.no6?'but 6 (Venus, the support/relationship number) is absent, so reciprocal support can be one-sided.':'and 6 (Venus) is present, supporting reciprocal relationships.'))+'</p>'+
       '<p class="note">'+esc(KB.partnership.rules.join(' '))+' <span class="src-tag">'+esc(KB.partnership.source)+'</span></p>');
 
     sec('Career & work life');
     const jb=KB.sectors.method_signals&&KB.sectors.method_signals.job_vs_business;
     const path=jb?(jb.business_drivers.includes(D.value)?'business / entrepreneurship':jb.job_drivers.includes(D.value)?'job (comfortable as an employee)':'either job or business'):'';
-    add('<p><strong>Numerology:</strong> Driver '+D.value+' ('+esc(profD.planet)+')'+(path?' leans toward <strong>'+esc(path)+'</strong>.':'.')+' Well-aligned fields from the Driver-Conductor: '+esc(dcCareers.join(', ')||'—')+'. Planet-supported fields: '+esc((profD.careers||[]).slice(0,6).join(', '))+'.</p>'+eGuide('career'));
+    add('<p><strong>Numerology:</strong> Driver '+D.value+' ('+esc(profD.planet)+')'+(path?' leans toward <strong>'+esc(path)+'</strong>.':'.')+' Well-aligned fields from the Driver-Conductor: '+esc(dcCareers.join(', ')||'-')+'. Planet-supported fields: '+esc((profD.careers||[]).slice(0,6).join(', '))+'.</p>'+eGuide('career'));
 
     sec('Health & wellness');
-    const hh=hdy?('the method flags personal years '+hdy.set.join(', ')+' as health-caution for Driver '+D.value+(hdy.hits.length?' — upcoming: '+hdy.hits.map(h=>h.year).join(', '):'')):'';
+    const hh=hdy?('the method flags personal years '+hdy.set.join(', ')+' as health-caution for Driver '+D.value+(hdy.hits.length?',upcoming: '+hdy.hits.map(h=>h.year).join(', '):'')):'';
     add('<p><strong>Numerology:</strong> '+(hh||'no driver-specific caution years recorded')+'. '+
         (cnt(7)>=2||cnt(2)>2?'Repetition signal present ('+(cnt(7)>=2?'7×'+cnt(7)+' ':'')+(cnt(2)>2?'2×'+cnt(2):'')+') which the method ties to a weaker health sector.':'No 7/2 repetition health signal.')+'</p>'+eGuide('health')+
-        '<p class="note">General wellbeing guidance only — not medical advice.</p>');
+        '<p class="note">General wellbeing guidance only, not medical advice.</p>');
 
     sec('Wealth & finance');
-    add('<p><strong>Numerology:</strong> '+(cnt(2)&&cnt(5)&&cnt(8)?'the 2-5-8 wealth line is complete (wealth/real-estate yog)':'the 2-5-8 wealth line is not complete'+(cnt(8)&&!(cnt(2)&&cnt(5))?' (8 without 2 &amp; 5 — the method advises caution with real estate)':''))+'. '+
+    add('<p><strong>Numerology:</strong> '+(cnt(2)&&cnt(5)&&cnt(8)?'the 2-5-8 wealth line is complete (wealth/real-estate yog)':'the 2-5-8 wealth line is not complete'+(cnt(8)&&!(cnt(2)&&cnt(5))?' (8 without 2 &amp; 5,the method advises caution with real estate)':''))+'. '+
         'Driver '+D.value+' financial-style follows its planet '+esc(profD.planet)+'.</p>'+eGuide('wealth'));
 
     sec('Personality & life themes');
@@ -6756,7 +6797,7 @@ function generateReport(){
     const cults=uniq([].concat(...eras.map(e=>e.culture))).slice(0,6);
     const events=uniq([].concat(...eras.map(e=>e.events))).slice(0,6);
 
-    add('<div class="note">This tab is <strong>generational sociology</strong> — broad tendencies of people born around '+dob.year+(region==='IN'?' in India':'')+', not numerology or astrology and not a claim about you personally. '+esc(KB.generational_context.disclaimer)+'</div>');
+    add('<div class="note">This tab is <strong>generational sociology</strong>,broad tendencies of people born around '+dob.year+(region==='IN'?' in India':'')+', not numerology or astrology and not a claim about you personally. '+esc(KB.generational_context.disclaimer)+'</div>');
 
     // --- Childhood Context Decoder ---
     sec('Childhood Context Decoder');
@@ -6792,22 +6833,22 @@ function generateReport(){
     sec('Personality Evolution Map');
     add('<p>Where this cohort sits, and what distinguishes its thinking from the generations on either side:</p>'+
       '<div class="gen-spectrum">'+
-      '<div class="gen-card"><div class="arrow">Earlier</div><h5>'+esc(cf.prev?cf.prev.name:'—')+'</h5><div class="yr">'+esc(cf.prev?cf.prev.range:'')+'</div><p>'+esc(co.vs_prev)+'</p></div>'+
-      '<div class="gen-card you"><h5>'+esc(co.name)+' — this cohort</h5><div class="yr">'+esc(co.range)+'</div><p>'+esc(co.worldview)+'</p></div>'+
-      '<div class="gen-card"><div class="arrow">Later</div><h5>'+esc(cf.next?cf.next.name:'—')+'</h5><div class="yr">'+esc(cf.next?cf.next.range:'')+'</div><p>'+esc(co.vs_next)+'</p></div>'+
+      '<div class="gen-card"><div class="arrow">Earlier</div><h5>'+esc(cf.prev?cf.prev.name:'-')+'</h5><div class="yr">'+esc(cf.prev?cf.prev.range:'')+'</div><p>'+esc(co.vs_prev)+'</p></div>'+
+      '<div class="gen-card you"><h5>'+esc(co.name)+',this cohort</h5><div class="yr">'+esc(co.range)+'</div><p>'+esc(co.worldview)+'</p></div>'+
+      '<div class="gen-card"><div class="arrow">Later</div><h5>'+esc(cf.next?cf.next.name:'-')+'</h5><div class="yr">'+esc(cf.next?cf.next.range:'')+'</div><p>'+esc(co.vs_next)+'</p></div>'+
       '</div>',
-      '\n# Personality Evolution Map\nBefore: '+(cf.prev?cf.prev.name:'—')+' | This: '+co.name+' | After: '+(cf.next?cf.next.name:'—')+'\n');
+      '\n# Personality Evolution Map\nBefore: '+(cf.prev?cf.prev.name:'-')+' | This: '+co.name+' | After: '+(cf.next?cf.next.name:'-')+'\n');
     // life-stage strip: childhood / adolescence / adulthood by era
     (function(){
       const stages=[['Childhood',win.from,win.from+6],['Adolescence',win.from+6,win.from+12],['Young adulthood',dob.year+18,dob.year+26]];
       let h='<div class="lifestrip">';
-      stages.forEach(s=>{ const e=KB.generational_context.eras.filter(x=>x.end>=s[1]&&x.start<=s[2]); const t=e.length?e[0].technology[0]:'—'; const c=e.length?e[0].culture[0]:'';
+      stages.forEach(s=>{ const e=KB.generational_context.eras.filter(x=>x.end>=s[1]&&x.start<=s[2]); const t=e.length?e[0].technology[0]:'-'; const c=e.length?e[0].culture[0]:'';
         h+='<div class="lifestage"><div class="ls-t">'+esc(s[0])+'</div><div class="ls-y">'+s[1]+'–'+s[2]+'</div><p>'+esc(t)+(c?'; '+esc(c):'')+'</p></div>'; });
       add(h+'</div>','');
     })();
     add('<p><strong>Values that tend to define this generation:</strong></p><div class="chips">'+co.values.map(v=>'<span class="chip v">'+esc(v)+'</span>').join('')+'</div>'+
         '<p><strong>What motivates them:</strong></p><div class="chips">'+co.motivations.map(v=>'<span class="chip">'+esc(v)+'</span>').join('')+'</div>'+
-        '<div class="gen-callout"><strong>What uniquely defines '+esc(co.name)+':</strong> '+esc(co.psychology.join(', '))+' — '+esc(co.tech)+'.</div>'+
+        '<div class="gen-callout"><strong>What uniquely defines '+esc(co.name)+':</strong> '+esc(co.psychology.join(', '))+','+esc(co.tech)+'.</div>'+
         '<div class="src-tag">'+''+'</div>',
         '\nValues: '+co.values.join(', ')+'\nMotivations: '+co.motivations.join(', ')+'\nDefining: '+co.psychology.join(', ')+'\n');
 
@@ -6825,7 +6866,7 @@ function generateReport(){
     // --- 4. Relationship Pattern Analysis (non-astrology) ---
     if(co.relationship_patterns){ const r=co.relationship_patterns;
       sec('Relationship Pattern Analysis');
-      add('<div class="note">Evidence-based <strong>behavioural trends</strong> for this cohort — <strong>no astrology</strong>. These are aggregate dating/communication patterns; <strong>attachment style is individual</strong>, not set by birth date.'+(r.evidence==='thin'||r.evidence==='projected'?' <span class="nvmark sec">evidence '+esc(r.evidence)+'</span>':'')+'</div>'+
+      add('<div class="note">Evidence-based <strong>behavioural trends</strong> for this cohort,<strong>no astrology</strong>. These are aggregate dating/communication patterns; <strong>attachment style is individual</strong>, not set by birth date.'+(r.evidence==='thin'||r.evidence==='projected'?' <span class="nvmark sec">evidence '+esc(r.evidence)+'</span>':'')+'</div>'+
           '<div class="q4">'+
           '<div class="qc"><div class="qt">Communication style</div><p>'+esc(r.communication)+'</p></div>'+
           '<div class="qc"><div class="qt">Relationship / dating trend</div><p>'+esc(r.trend)+'</p></div>'+
@@ -6892,7 +6933,7 @@ function generateReport(){
   // ---- render as tabs ----
   const tabsDef=[['num','Numerology'],['astro','Astrology'],['combined','Combined insights'],['context','Life context']];
   const out=document.getElementById('reportOut');
-  let html='<h2 style="margin-top:0">Life Report — '+esc(name)+'</h2>';
+  let html='<h2 style="margin-top:0">Life Report,'+esc(name)+'</h2>';
   html+='<div class="rtabs">'+tabsDef.map((t,i)=>'<button class="rtab'+(i===0?' active':'')+'" data-rt="'+t[0]+'" onclick="reportTab(\''+t[0]+'\')">'+esc(t[1])+'</button>').join('')+'</div>';
   for(let i=0;i<tabsDef.length;i++){
     const key=tabsDef[i][0];
@@ -6922,7 +6963,7 @@ function resolvePlace(){
   const el=document.getElementById('placeResolved'); const v=document.getElementById('inPlace').value.trim();
   if(!v){ el.textContent=''; return; }
   const g=geocodeCity(v);
-  el.innerHTML = g ? ''+g.name+' → '+g.lat.toFixed(2)+', '+g.lng.toFixed(2)+' (UTC'+(g.tz>=0?'+':'')+g.tz+') — used for Moon sign timezone'
+  el.innerHTML = g ? ''+g.name+' → '+g.lat.toFixed(2)+', '+g.lng.toFixed(2)+' (UTC'+(g.tz>=0?'+':'')+g.tz+'),used for Moon sign timezone'
     : 'not in the offline city list. Pick a suggestion, use the map below, or enter coordinates (Moon otherwise ignores timezone).';
 }
 let _map=null,_marker=null,_leafletLoading=false;
@@ -6933,7 +6974,7 @@ function toggleMap(){
   if(_map){ setTimeout(()=>_map.invalidateSize(),100); return; }
   if(typeof L!=='undefined'){ initMap(); return; }
   if(_leafletLoading) return; _leafletLoading=true;
-  box.innerHTML='<div class="note" style="padding:12px">Loading map… (needs internet; if it stays blank you are offline — use the city box or manual coordinates instead).</div>';
+  box.innerHTML='<div class="note" style="padding:12px">Loading map… (needs internet; if it stays blank you are offline, use the city box or manual coordinates instead).</div>';
   const css=document.createElement('link'); css.rel='stylesheet'; css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'; document.head.appendChild(css);
   const js=document.createElement('script'); js.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
   js.onload=()=>{ box.innerHTML=''; initMap(); };
@@ -6964,7 +7005,7 @@ async function pickedLocation(lat,lng){
   document.getElementById('inLat').value=lat.toFixed(4);
   document.getElementById('inLng').value=lng.toFixed(4);
   const el=document.getElementById('placeResolved');
-  el.innerHTML=''+lat.toFixed(4)+', '+lng.toFixed(4)+' — resolving place & timezone…';
+  el.innerHTML=''+lat.toFixed(4)+', '+lng.toFixed(4)+',resolving place & timezone…';
   // reverse geocode place name (graceful)
   let placeName='';
   try{
@@ -6980,10 +7021,10 @@ async function pickedLocation(lat,lng){
     if(r.ok){ const j=await r.json(); const zone=j.timeZone;
       if(zone&&dm){ const off=offsetForZone(zone,+dm[3],+dm[2],+dm[1],tm?+tm[1]:12); if(off!=null){ tz=off; tzNote='zone '+zone+(off!==Math.round(off*4)/4?'':'')+' (offset at birth date)'; } } }
   }catch(e){}
-  if(tz==null){ const nc=nearestCityTz(lat,lng); if(nc){ tz=nc.tz; tzNote='nearest known city ('+nc.name+') standard offset — adjust for DST if needed'; } }
+  if(tz==null){ const nc=nearestCityTz(lat,lng); if(nc){ tz=nc.tz; tzNote='nearest known city ('+nc.name+') standard offset, adjust for DST if needed'; } }
   if(tz==null){ tz=Math.round(lng/15); tzNote='estimated from longitude (rough)'; }
   document.getElementById('inTz').value=tz;
-  el.innerHTML=''+(placeName?placeName+' — ':'')+lat.toFixed(3)+', '+lng.toFixed(3)+' · UTC'+(tz>=0?'+':'')+tz+' <span class="note">('+tzNote+')</span>';
+  el.innerHTML=''+(placeName?placeName+',':'')+lat.toFixed(3)+', '+lng.toFixed(3)+' · UTC'+(tz>=0?'+':'')+tz+' <span class="note">('+tzNote+')</span>';
 }
 function scrollToForm(){ document.getElementById('formSection').scrollIntoView({behavior:'smooth'}); document.getElementById('inName').focus({preventScroll:true}); }
 // ---- report history (multiple people in one view) ----
@@ -7033,7 +7074,7 @@ function runReport(){
   const dob=document.getElementById('inDOB').value.trim();
   generateReport();
   const out=document.getElementById('reportOut');
-  if(err.style.display==='block' || !out.innerHTML.trim()) return;  // validation failed — don't record
+  if(err.style.display==='block' || !out.innerHTML.trim()) return;  // validation failed, don't record
   const k=pkey(name,dob);
   const entry={id:_idc++, key:k, name:name||'Unnamed', dob:dob, html:out.innerHTML, md:lastReportMd, ts:Date.now()};
   const ix=reports.findIndex(r=>r.key===k); if(ix>=0) reports.splice(ix,1);
