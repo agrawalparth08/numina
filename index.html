@@ -166,7 +166,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:var(--jali)
 footer .wrap{position:relative;z-index:2;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
 @media(max-width:760px){.form-grid,.gen-spectrum,.lifestrip,.q4,.twocol{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}.hero-info{grid-template-columns:1fr}}
 @media print{.topbar,.hero,#formSection,footer,.form-actions{display:none!important}#reportSection{display:block!important}.report::before{display:none}.rtabs{display:none}.rpanel{display:block!important}.rpanel+.rpanel{margin-top:20px}}
-</style></head>
+#wm,#pdfHead,#pdfFoot{display:none}@media print{ #wm{display:flex;position:fixed;inset:0;z-index:9999;pointer-events:none;align-items:center;justify-content:center;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact} #wm .wmtext{font-family:var(--serif),Georgia,serif;font-weight:600;font-size:17vw;line-height:1;color:rgba(33,26,51,.12);transform:rotate(-45deg);white-space:nowrap;letter-spacing:.06em;-webkit-print-color-adjust:exact;print-color-adjust:exact} #pdfHead{display:flex;position:fixed;top:0;left:0;right:0;height:20mm;box-sizing:border-box;padding:9mm 13mm 0;justify-content:space-between;align-items:flex-start;background:#fff;font-family:var(--serif),Georgia,serif;font-weight:600;font-size:12px;color:#00714A;z-index:10000;-webkit-print-color-adjust:exact;print-color-adjust:exact} #pdfFoot{display:flex;position:fixed;bottom:0;left:0;right:0;height:18mm;box-sizing:border-box;padding:0 13mm 9mm;justify-content:space-between;align-items:flex-end;background:#fff;font-size:10px;color:#8C849C;z-index:10000;-webkit-print-color-adjust:exact;print-color-adjust:exact} @page{margin:26mm 13mm 24mm 13mm} body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}@media print{/*PRINT_EDGE_FIX*/ #historyBar{display:none!important} body{background:#fff} #reportSection{background:#fff;padding:0} #reportSection .wrap{padding:0;max-width:100%} .report{border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important} .report::after,.panel::after,.report::before{display:none!important}}.credit a{color:var(--marigold);font-weight:600}.report .credit a{color:var(--magenta)}</style></head>
 <body>
 <header class="topbar"><div class="wrap"><div class="brand"><span class="mk"></span>Numina</div><div class="tag">Numbers · Stars · Generation</div></div></header>
 
@@ -211,7 +211,7 @@ footer .wrap{position:relative;z-index:2;display:flex;justify-content:space-betw
     </div>
     <div class="form-actions">
       <button class="btn" onclick="runReport()">Reveal my blueprint</button>
-      <button class="btn-sec btn" id="btnPrint" onclick="window.print()" style="display:none">Print / Save as PDF</button>
+      <button class="btn-sec btn" id="btnPrint" onclick="doPrint()" style="display:none">Print / Save as PDF</button>
       <button class="btn-sec btn" id="btnMd" onclick="copyMarkdown()" style="display:none">Copy as text</button>
     </div>
     <div id="formError" class="warnbox"></div>
@@ -223,6 +223,8 @@ footer .wrap{position:relative;z-index:2;display:flex;justify-content:space-betw
 <footer><div class="wrap">
   <div>Numina — a reflective tool, not professional advice.</div>
   <div>Numerology &amp; astrology are not scientifically validated. Generational context is broad sociology, not individual prediction.</div>
+
+  <div class="credit" style="width:100%;border-top:1px solid rgba(255,255,255,.16);margin-top:8px;padding-top:14px">Built with curiosity by <a href="https://www.linkedin.com/in/htrap94" target="_blank" rel="noopener">Parth Agrawal</a>.</div>
 </div></footer>
 
 <script>
@@ -5712,6 +5714,152 @@ const DEFAULT_KB = {
         ]
       }
     ]
+  },
+  "ishta_dev": {
+    "1": { "planet": "Sun", "deity": "Surya (the Sun)", "practice": "offer water to the Sun at sunrise" },
+    "2": { "planet": "Moon", "deity": "Shiva", "practice": "the moon rests on Shiva's head; worship Shiva" },
+    "3": { "planet": "Jupiter", "deity": "Ganesha", "practice": "a morning Ganesh prayer" },
+    "4": { "planet": "Rahu", "deity": "Shani (Saturn)", "practice": "offer mustard oil and black sesame; feed stray dogs" },
+    "5": { "planet": "Mercury", "deity": "Ganesha", "practice": "a morning Ganesh prayer" },
+    "6": { "planet": "Venus", "deity": "Vishnu with Lakshmi", "practice": "worship Vishnu and Lakshmi together" },
+    "7": { "planet": "Ketu", "deity": "Shani (Saturn)", "practice": "visit a Shani temple on Saturday; help the less-privileged" },
+    "8": { "planet": "Saturn", "deity": "Shani (Saturn)", "practice": "worship Shani on Saturday; help the less-privileged" },
+    "9": { "planet": "Mars", "deity": "Hanuman", "practice": "read the Hanuman Chalisa, especially on Tuesday" }
+  },
+  "blessing_number": {
+    "method": "Reduce the birth year to a single digit; Male = 11 - that; Female = that + 4; reduce again to 1-9.",
+    "general": "A 'wild-card' number that can shift the whole chart -- most potent when it is not already present in your date, month, year, driver or conductor, and especially if it completes one of the eight grid lines."
+  },
+  "karmic_numbers": {
+    "days": [10, 13, 14, 16, 19],
+    "by_day": {
+      "10": "The karmic slate sits at zero -- neither credit nor debt; your conduct now sets the balance.",
+      "13": "Associated with past misuse of power; brings both capability and considerable struggle.",
+      "14": "Linked to 'abuse of freedom' -- a caution around money handling and shortcuts.",
+      "16": "Linked to 'abuse of love' -- a caution around relationships and fidelity.",
+      "19": "Linked to 'abuse of power' -- a caution against repeating self-serving use of authority."
+    },
+    "remedy_note": "In this method karmic debt is cleared only through good deeds -- no yantra, mantra or tantra removes it; be wary of anyone selling such a 'fix'."
+  },
+  "master_numbers": {
+    "11": "Visionary 'dreamer' (11 -> 2, Moon): strong imagination; executes best with a mentor or support system.",
+    "22": "'Dreamer and doer' (22 -> 4, Rahu): vision plus discipline and the capacity to build.",
+    "33": "The humanitarian 'giver': service and unconditional care for others."
+  },
+  "complementary_numbers": {
+    "map": { "1": [9], "2": [5, 7], "3": [5, 7], "6": [5], "7": [3], "8": [5, 4], "9": [1] },
+    "note": "5 has no complementary number, which is why this method treats 5 as the key balancing number of the chart."
+  },
+  "daily_rules": {
+    "rules": [
+      "Wear a metal-strap wrist-watch (not leather or rubber); match the metal colour to any missing 6/7.",
+      "Wear a crystal bracelet on the left hand to clear negative energy.",
+      "When taking the car out, edge it forward first, then reverse -- don't 'start the day in reverse'.",
+      "Avoid starting important work or leaving home in the 'paune' window (clock minutes :40-:50).",
+      "Wear your driver's favourable colour and avoid its adverse colour."
+    ]
+  },
+  "signature_rules": {
+    "rules": [
+      "Slant the signature gently upward (rising), never flat.",
+      "Keep letters close-knit / joined rather than widely gapped.",
+      "Add an underline beneath -- but it must not cross through any letter.",
+      "Place two small dots below the underline as 'support'.",
+      "Never sign in black ink; prefer blue."
+    ],
+    "note": "Presented as a supportive habit, not a guarantee; practise consistently."
+  },
+  "investing_style": {
+    "stock_market": "Needs 6 (Venus); 5 and 6 together is strongest. Lacking both, the method advises avoiding direct trading; extra caution for Driver 4 or 8.",
+    "stock_alternative": "If 5 and 6 are both absent but 3 and 7 are present, the method suggests advising/broking -- handling others' money for commission rather than trading your own.",
+    "property": "Favoured when 2, 5 and 8 are present (5+8 strong; 2+5 acceptable); 2+8 without 5 is called risky.",
+    "gold": "Tied to 6 (Venus).",
+    "silver": "Tied to 7 (Ketu)."
+  },
+  "business_name": {
+    "parameters": [
+      "Choose compatible partners by driver/conductor.",
+      "The company-name total should suit all partners/directors.",
+      "The product/brand-name total should also be supportive.",
+      "Place staff by department to their number strengths (e.g. 4 sells, 5 markets, 5/8 for finance).",
+      "Expand or borrow only in a supportive personal-year."
+    ],
+    "name_rule": "It is not only the single-digit total but the two-digit pair it reduces from that matters; a number favourable to one director should not be reused for a clashing one."
+  },
+  "compound_numbers": {
+    "_about": "The classical 'compound' (two-digit) reading: the single digit shows the outer/material self, while the two-digit number behind it (10-52) shows the hidden current. Read the two-digit total of the birth day, the name, or date+month.",
+    "meanings": {
+      "10": "Wheel of Fortune -- honour, faith and self-confidence; rise and fall; plans tend to be carried out.",
+      "11": "A warning of hidden dangers, trials and treachery from others; great difficulties to overcome.",
+      "12": "The Sacrifice -- anxiety of mind; a risk of being used for others' plans.",
+      "13": "Upheaval and change; power that destroys if misused; 'not unfortunate as supposed', but a number of warning.",
+      "14": "Movement and dealings with people; luck with money/speculation but real risk; act with caution.",
+      "15": "Magic, mystery and eloquence; favourable for gifts, money and the arts; a deep occult pull.",
+      "16": "The Shattered Citadel -- a warning of accident and the collapse of plans; plan ahead to avert it.",
+      "17": "The Star of the Magi -- highly spiritual; rises above trials; a number of a lasting name.",
+      "18": "Materialism against the spiritual; quarrels, upheaval and treachery; use with great care.",
+      "19": "The Prince of Heaven / the Sun -- very fortunate: happiness, success and honour.",
+      "20": "The Awakening -- a call to a new purpose or cause; not a material number.",
+      "21": "The Crown of the Magi -- advancement and honours; 'victory after a long fight'.",
+      "22": "A warning of illusion and false judgement; a good person misled by others.",
+      "23": "The Royal Star of the Lion -- success and help from those in high places; very fortunate.",
+      "24": "Fortunate -- gain through people of rank and through love.",
+      "25": "Strength gained through hard experience; favourable for the future.",
+      "26": "Grave warnings -- losses through bad partnerships, speculation and advice.",
+      "27": "A good number -- authority, power and command; carry out your own ideas.",
+      "28": "Full of contradiction -- great promise but risk of loss through others; provide for the future.",
+      "29": "Uncertainty, unreliable friends and treachery; a warning, often through relationships.",
+      "30": "Thoughtful, mentally superior; sets material things aside; neither fortunate nor unfortunate.",
+      "31": "Like 30 but more self-contained and isolated; not fortunate materially.",
+      "32": "Magical, persuasive power over groups; fortunate if you hold to your own judgement.",
+      "33": "Same as 24 -- gain through people of rank and through love.",
+      "34": "Same as 25 -- strength through experience.",
+      "35": "Same as 26 -- warnings around partnerships.",
+      "36": "Same as 27 -- authority and command.",
+      "37": "Good fortune in friendship, love and partnerships.",
+      "38": "Same as 29 -- uncertainty and unreliable friends.",
+      "39": "Same as 30 -- thoughtful and mental.",
+      "40": "Same as 31 -- self-contained, isolated.",
+      "41": "Same as 32 -- persuasive power if self-guided.",
+      "42": "Same as 24 -- gain through rank and love.",
+      "43": "An unfortunate number -- revolution, upheaval and failure.",
+      "44": "Same as 26 -- warnings around partnerships.",
+      "45": "Same as 27 -- authority and command.",
+      "46": "Same as 37 -- fortunate friendships and partnerships.",
+      "47": "Same as 29 -- uncertainty and unreliable friends.",
+      "48": "Same as 30 -- thoughtful and mental.",
+      "49": "Same as 31 -- self-contained, isolated.",
+      "50": "Same as 32 -- persuasive power if self-guided.",
+      "51": "Very powerful -- the warrior; sudden advancement, but danger from enemies.",
+      "52": "Same as 43 -- upheaval and reversal."
+    }
+  },
+  "pythagorean_arrows": {
+    "_about": "Western (Pythagorean) numerology reads the birth-grid's full lines as named 'arrows': a line fully present is an arrow of strength, a line fully empty is an arrow of weakness. These cross-reference the Lo Shu planes.",
+    "lines": [
+      { "nums": [1,5,9], "strength": "Arrow of Determination -- persistence and drive (can harden into stubbornness).", "weakness": "Arrow of Frustration -- a scattered will; expectations often unmet." },
+      { "nums": [3,5,7], "strength": "Arrow of Spirituality -- calm, intuitive, a peace-giving presence.", "weakness": "Arrow of the Sceptic -- needs to test everything; prone to doubt and worry." },
+      { "nums": [3,6,9], "strength": "Arrow of the Intellect -- a sharp, active mind and memory.", "weakness": "Arrow of Poor Memory -- the mind must be kept exercised." },
+      { "nums": [2,5,8], "strength": "Arrow of Emotional Balance -- steady feelings and strong intuition.", "weakness": "Arrow of Hypersensitivity -- easily hurt; feelings are guarded." },
+      { "nums": [1,4,7], "strength": "Arrow of Practicality -- capable, hands-on, gets things done.", "weakness": "Arrow of Disorder -- ideas stay theoretical without a system." },
+      { "nums": [1,2,3], "strength": "Arrow of the Planner -- loves order, method and organising.", "weakness": "Arrow of Procrastination -- plans delayed or left undone." },
+      { "nums": [4,5,6], "strength": "Arrow of Will -- strong-willed, determined life-force.", "weakness": "Arrow of Passivity -- thinks and plans, but must push to act." },
+      { "nums": [7,8,9], "strength": "Arrow of Activity -- forceful and expressive (watch over-drive).", "weakness": "Arrow of Inactivity -- energy must be roused into action." }
+    ]
+  },
+  "classical_corroboration": {
+    "_about": "Where the classical sources agree on a number's nature it is stated once; where they differ the variant is noted.",
+    "by_number": {
+      "1": { "planet": "Sun (sources agree)", "reading": "Leadership, individuality and ambition -- consistent across sources." },
+      "2": { "planet": "Moon (agree)", "reading": "Sensitive, diplomatic and imaginative; can be over-emotional." },
+      "3": { "planet": "Jupiter (agree)", "reading": "Expressive, optimistic and knowledge-loving; rises to responsibility." },
+      "4": { "planet": "Vedic: Rahu; classical Western: Uranus", "reading": "Unconventional, hard-working and reform-minded, with a struggle/discipline theme; some Western texts instead read 4 as steady and practical -- a notable variation." },
+      "5": { "planet": "Mercury (agree)", "reading": "Versatile, communicative, freedom-loving and quick -- the universal balancer." },
+      "6": { "planet": "Venus (agree)", "reading": "Love, beauty, home and responsibility; nurturing and drawn to comfort." },
+      "7": { "planet": "Vedic: Ketu; classical Western: Neptune", "reading": "Intuitive, researching, spiritual and restless; learns by experience." },
+      "8": { "planet": "Saturn (agree)", "reading": "Discipline and karma; material and spiritual extremes; success through persistence." },
+      "9": { "planet": "Mars (agree)", "reading": "Courage, drive, idealism and temper -- the fighter and the humanitarian." }
+    }
   }
 };
 </script>
@@ -6392,6 +6540,85 @@ function generateReport(){
         '\n## Lucky asset numbers\nAim for totals: '+ar.rec.join(', ')+' | avoid: '+ar.avoid.join(', ')+'\n');
   }
 
+  // 8c Expanded numerology (blessing / karmic / master / ishta / complementary / guidance)
+  try {
+    const red9=x=>{ x=Math.abs(Math.round(x)); while(x>9){ x=String(x).split('').reduce((a,b)=>a+(+b),0); } return x; };
+    const has=n=>(grid[n]||0)>0;
+    if(KB.blessing_number){
+      const yt=red9(dob.year), bRaw=gender==='M'?(11-yt):(yt+4), bVal=red9(bRaw);
+      sec('Blessing number');
+      add('<p>Derived from the birth year only ('+dob.year+' → '+yt+'); for '+(gender==='M'?'males, 11 − '+yt:'females, '+yt+' + 4')+' = <strong>'+bVal+'</strong>'+(bRaw!==bVal?' (from '+bRaw+')':'')+'.</p>'+
+          '<p>'+esc(KB.blessing_number.general||'')+'</p>'+
+          '<p class="note">'+(has(bVal)?'Your blessing number '+bVal+' is already present in your chart, so its "wild-card" effect is muted.':'Your blessing number '+bVal+' is absent from your date, month and year — the method says it then carries its full effect, especially if it completes a grid line.')+'</p>');
+    }
+    if(KB.karmic_numbers){
+      sec('Karmic number');
+      const km=KB.karmic_numbers.by_day&&KB.karmic_numbers.by_day[String(dob.day)];
+      if(km) add('<p>Born on the <strong>'+dob.day+'</strong> — a karmic-debt date in this method: '+esc(km)+'</p><p class="note">'+esc(KB.karmic_numbers.remedy_note||'')+'</p>');
+      else add('<p>Your birth day ('+dob.day+') is not one of the karmic-debt dates ('+(KB.karmic_numbers.days||[]).join(', ')+'), so this rule flags no past-life "debt".</p>');
+    }
+    if(KB.master_numbers){
+      const mv=(C.chain||[]).filter(v=>v===11||v===22||v===33)[0];
+      if(mv){ sec('Master number'); add('<p>Your conductor passes through <strong>'+mv+'</strong> ('+chainTxt(C.chain)+'), a master number.</p><p>'+esc(KB.master_numbers[String(mv)]||'')+'</p>'); }
+    }
+    if(KB.ishta_dev && KB.ishta_dev[String(D.value)]){
+      const idv=KB.ishta_dev[String(D.value)];
+      sec('Ishta Dev (presiding deity)');
+      add('<p>For Driver '+D.value+' ('+esc(idv.planet||profD.planet)+') the method names <strong>'+esc(idv.deity)+'</strong>'+(idv.practice?' — '+esc(idv.practice):'')+'.</p>');
+    }
+    if(KB.complementary_numbers && ga.missing && ga.missing.length){
+      const mp=KB.complementary_numbers.map||{};
+      const rows=ga.missing.map(n=>{ const c=mp[String(n)]; return c?('<li>Missing <strong>'+n+'</strong> → partially supported by '+c.join(' or ')+'</li>'):(String(n)==='5'?'<li>Missing <strong>5</strong> → no complementary number exists (the key balancing number)</li>':null); }).filter(Boolean);
+      if(rows.length){ sec('Complementary numbers (for missing numbers)'); add('<ul>'+rows.join('')+'</ul><p class="note">'+esc(KB.complementary_numbers.note||'')+'</p>'); }
+    }
+    if(KB.investing_style){
+      const tips=[];
+      tips.push('<li><strong>Stock market:</strong> '+(has(6)?(has(5)?'5 and 6 both present — the strongest configuration':'6 present — supported'):'6 absent — '+(has(3)&&has(7)?'consider advising/broking rather than trading your own money':'the method advises caution'))+'</li>');
+      tips.push('<li><strong>Property:</strong> '+((has(2)&&has(5)&&has(8))?'2, 5 and 8 present — strongly favoured':((has(5)&&has(8))?'5 and 8 present — favoured':((has(2)&&has(5))?'2 and 5 present — acceptable':((has(2)&&has(8)&&!has(5))?'2 and 8 without 5 — called risky':'mixed signals'))))+'</li>');
+      tips.push('<li><strong>Gold:</strong> '+(has(6)?'6 present — favoured':'6 absent — less favoured')+' · <strong>Silver:</strong> '+(has(7)?'7 present — favoured':'7 absent — less favoured')+'</li>');
+      sec('Investing style'); add('<ul>'+tips.join('')+'</ul><p class="note">General guidance, not financial advice.</p>');
+    }
+    if(KB.daily_rules && KB.daily_rules.rules){ sec('Daily habits'); add('<ul>'+KB.daily_rules.rules.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>'); }
+    if(KB.signature_rules && KB.signature_rules.rules){ sec('Signature'); add('<ul>'+KB.signature_rules.rules.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>'+(KB.signature_rules.note?'<p class="note">'+esc(KB.signature_rules.note)+'</p>':'')); }
+  } catch(e){ /* expanded sections are optional; never break the core report */ }
+
+  // 8d Book cross-references (compound numbers / Pythagorean arrows / classical reading)
+  try {
+    const hasN=n=>(grid[n]||0)>0;
+    if(KB.compound_numbers && KB.compound_numbers.meanings){
+      const cm=KB.compound_numbers.meanings;
+      const pick=chain=>{ for(const v of (chain||[])){ if(v>=10&&v<=52&&cm[String(v)]) return v; } return null; };
+      const rows=[];
+      if(dob.day>=10&&cm[String(dob.day)]) rows.push(['Birth day '+dob.day,dob.day]);
+      const nv=pick(N.chain); if(nv) rows.push(['Name total '+nv,nv]);
+      const cv=pick(C.chain); if(cv&&cv!==nv) rows.push(['Destiny total '+cv,cv]);
+      if(rows.length){
+        sec('Compound numbers (the two-digit reading)');
+        add('<p class="note">'+esc(KB.compound_numbers._about||'')+'</p><ul>'+rows.map(r=>'<li><strong>'+esc(r[0])+'</strong> → '+esc(cm[String(r[1])])+'</li>').join('')+'</ul>'+(KB.compound_numbers.source?'<div class="src-tag">'+esc(KB.compound_numbers.source)+'</div>':''));
+      }
+    }
+    if(KB.pythagorean_arrows && KB.pythagorean_arrows.lines){
+      const present=[],absent=[];
+      for(const ln of KB.pythagorean_arrows.lines){
+        const all=ln.nums.every(n=>hasN(n)), none=ln.nums.every(n=>!hasN(n));
+        if(all&&ln.strength) present.push('<li><strong>'+ln.nums.join('-')+':</strong> '+esc(ln.strength)+'</li>');
+        else if(none&&ln.weakness) absent.push('<li><strong>'+ln.nums.join('-')+':</strong> '+esc(ln.weakness)+'</li>');
+      }
+      if(present.length||absent.length){
+        sec('Arrows of the chart (Western cross-reference)');
+        let ah='<p class="note">'+esc(KB.pythagorean_arrows._about||'')+'</p>';
+        if(present.length) ah+='<p><strong>Arrows of strength (lines you have):</strong></p><ul>'+present.join('')+'</ul>';
+        if(absent.length) ah+='<p><strong>Arrows of weakness (empty lines):</strong></p><ul>'+absent.join('')+'</ul>';
+        if(KB.pythagorean_arrows.source) ah+='<div class="src-tag">'+esc(KB.pythagorean_arrows.source)+'</div>';
+        add(ah);
+      }
+    }
+    if(KB.classical_corroboration && KB.classical_corroboration.by_number){
+      const cc=KB.classical_corroboration.by_number[String(D.value)];
+      if(cc){ sec('Classical reading of Driver '+D.value); add('<p><strong>Planet:</strong> '+esc(cc.planet)+'. '+esc(cc.reading)+'</p>'+(KB.classical_corroboration.source?'<div class="src-tag">'+esc(KB.classical_corroboration.source)+'</div>':'')); }
+    }
+  } catch(e){ /* book cross-references are optional */ }
+
   // 9 Remedies
   sec('Remedies');
   const rem=KB.remedies.by_number[String(D.value)]||{};
@@ -6672,7 +6899,7 @@ function generateReport(){
     const body=cleanReport(S.filter(s=>s.tab===key).map(s=>s.h).join('')) || '<p class="note">Nothing to show in this tab for the current inputs.</p>';
     html+='<div class="rpanel'+(i===0?' active':'')+'" data-rp="'+key+'">'+body+'</div>';
   }
-  html+='<div class="rdisc">'+esc(KB._disclaimer)+'</div>';
+  html+='<div class="rdisc">'+esc(KB._disclaimer)+'<br><span class="credit">Built with curiosity by <a href="'+ 'https://www.linkedin.com/in/htrap94' +'" target="_blank" rel="noopener">Parth Agrawal</a>.</span></div>';
   out.innerHTML=html;
   out.style.display='';
   document.getElementById('btnPrint').style.display='';
@@ -6799,6 +7026,7 @@ function goToReport(){
   document.getElementById('reportSection').style.display='block';
   document.getElementById('reportSection').scrollIntoView({behavior:'smooth'});
 }
+function doPrint(){ var ts=new Date().toLocaleString([], {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); var who=''; try{ var r=reports.find(function(x){return x.id===activeId;}); if(r) who=r.name; }catch(e){} var hd=document.getElementById('pdfHead'); if(hd) hd.innerHTML='<span>Numina</span><span>'+(who?esc(who)+' \u00b7 ':'')+'Life Blueprint</span>'; var ft=document.getElementById('pdfFoot'); if(ft) ft.innerHTML='<span>Built with curiosity by Parth Agrawal</span><span>Downloaded '+ts+'</span>'; window.print();}
 function runReport(){
   const err=document.getElementById('formError'); err.style.display='none';
   const name=document.getElementById('inName').value.trim();
@@ -6831,4 +7059,5 @@ if(reports.length){
   renderHistory();
 }
 </script>
+<div id="wm" aria-hidden="true"><span class="wmtext">NUMINA</span></div><div id="pdfHead"><span>Numina</span><span>Life Blueprint</span></div><div id="pdfFoot"></div>
 </body></html>
